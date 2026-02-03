@@ -2,486 +2,54 @@
   {
     "id": 1,
     "lawName": "労働安全衛生関連法令",
-    "title": "難病対策",
+    "title": "障害者の採用情報（労働基準局（チャレンジ雇用）の募集について）",
     "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/seisakunitsuite/bunya/kenkou_iryou/kenkou/nanbyou/",
-    "pdfUrls": [
-      {
-        "name": "",
-        "url": "https://www.mhlw.go.jp/content/001438916.pdf"
-      },
-      {
-        "name": "医療費助成制度周知用資料［292KB］",
-        "url": "https://www.mhlw.go.jp/content/001438374.pdf"
-      },
-      {
-        "name": "",
-        "url": "https://www.mhlw.go.jp/content/001153322.pdf"
-      },
-      {
-        "name": "",
-        "url": "https://www.mhlw.go.jp/content/001155032.pdf"
-      },
-      {
-        "name": "",
-        "url": "https://www.mhlw.go.jp/content/001155034.pdf"
-      }
-    ],
-    "promulgationDate": "2023-１０-0１"
+    "description": "",
+    "officialUrl": "https://www.mhlw.go.jp/stf/kouseiroudoushou/saiyou/hijoukin/hj-roudoukijunkyoku-challenge-koyou.html",
+    "source": "RSS",
+    "collectedDate": "2026-02-03",
+    "publishedDate": "2026-02-03"
   },
   {
     "id": 2,
     "lawName": "労働安全衛生関連法令",
-    "title": "労働者派遣法の改正",
+    "title": "労働基準監督官採用試験広報HP",
     "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000077386.html",
-    "pdfUrls": [
-      {
-        "name": "平成27年労働者派遣法改正法施行から３年を迎えるにあたっての確認事項【派遣で働く皆様へ】［PDF形式:1,081KB］",
-        "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11650000-Shokugyouanteikyokuhakenyukiroudoutaisakubu/0000204879.pdf"
-      },
-      {
-        "name": "法違反となる可能性のあるケースで困ったときはお近くの都道府県労働局へ相談しましょう［PDF形式:631KB］",
-        "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11650000-Shokugyouanteikyokuhakenyukiroudoutaisakubu/0000204880.pdf"
-      },
-      {
-        "name": "派遣で働く皆さまへ～平成27年労働者派遣法改正法が成立しました～ ［PDF形式:324KB］",
-        "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11650000-Shokugyouanteikyokuhakenyukiroudoutaisakubu/0000097169.pdf"
-      },
-      {
-        "name": "パンフレット「派遣で働くときに特に知っておきたいこと」（派遣労働者の皆様へ）［PDF形式:420KB］",
-        "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11600000-Shokugyouanteikyoku/0000102917.pdf"
-      },
-      {
-        "name": "平成27年労働者派遣法改正法施行から３年を迎えるにあたっての確認事項【派遣先の皆様へ】［PDF形式:464KB］",
-        "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11650000-Shokugyouanteikyokuhakenyukiroudoutaisakubu/0000196406.pdf"
-      }
-    ],
-    "promulgationDate": "2018-10-19"
+    "description": "",
+    "officialUrl": "https://www.mhlw.go.jp/stf/kouseiroudoushou/saiyou/kantokukan.html",
+    "source": "RSS",
+    "collectedDate": "2026-02-03",
+    "publishedDate": "2026-02-03"
   },
   {
     "id": 3,
     "lawName": "労働安全衛生関連法令",
-    "title": "人材確保対策",
+    "title": "労働基準関係法令違反に係る公表事案",
     "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000053276.html",
-    "pdfUrls": [
-      {
-        "name": "パンフレット「取り組みませんか？『魅力ある職場づくり』で生産性向上と人材確保」［719KB］",
-        "url": "https://www.mhlw.go.jp/content/001491253.pdf"
-      },
-      {
-        "name": "中小企業団体助成コース",
-        "url": "https://www.mhlw.go.jp/content/11600000/001074992.pdf"
-      },
-      {
-        "name": "人事評価改善等助成コース",
-        "url": "https://www.mhlw.go.jp/content/11600000/001075193.pdf"
-      },
-      {
-        "name": "人材確保に「効く」課題チェック表（訪問看護分野）［3.0MB］",
-        "url": "https://www.mhlw.go.jp/content/001507535.pdf"
-      },
-      {
-        "name": "人材確保に「効く」課題チェック表（保育分野）［3.0MB］",
-        "url": "https://www.mhlw.go.jp/content/001505509.pdf"
-      }
-    ]
+    "description": "",
+    "officialUrl": "https://www.mhlw.go.jp/kinkyu/151106.html",
+    "source": "RSS",
+    "collectedDate": "2026-02-03",
+    "publishedDate": "2026-02-03"
   },
   {
     "id": 4,
     "lawName": "労働安全衛生関連法令",
-    "title": "ストレスチェック",
-    "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/bunya/roudoukijun/anzeneisei12/",
-    "pdfUrls": [
-      {
-        "name": "「事業場における労働者の健康保持増進のための指針」を改正しました。[PDF形式：262KB]［262KB］",
-        "url": "https://www.mhlw.go.jp/content/001080091.pdf"
-      },
-      {
-        "name": "労働安全衛生法に基づくストレスチェック制度実施マニュアル（令和３年２月改訂）［PDF形式：6,670KB］［6.6MB］",
-        "url": "https://www.mhlw.go.jp/content/000533925.pdf"
-      },
-      {
-        "name": "ストレスチェック制度実施規程例 ［PDF形式：197KB］［197KB］",
-        "url": "https://www.mhlw.go.jp/content/000533944.pdf"
-      },
-      {
-        "name": "数値基準に基づいて「高ストレス者」を選定する方法 ［PDF形式：240KB］",
-        "url": "https://www.mhlw.go.jp/bunya/roudoukijun/anzeneisei12/pdf/150803-1.pdf"
-      },
-      {
-        "name": "外部機関にストレスチェック及び面接指導の実施を委託する場合のチェックリスト例 ［PDF形式：165KB］［165KB］",
-        "url": "https://www.mhlw.go.jp/content/000533947.pdf"
-      }
-    ],
-    "promulgationDate": "2022-0７-12"
+    "title": "高年齢労働者の安全衛生対策",
+    "stage": "enforced",
+    "description": "70歳以上の労働者に対する特別な安全衛生対策",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/newpage_00007.html",
+    "source": "重要トピック",
+    "collectedDate": "2026-02-03"
   },
   {
     "id": 5,
     "lawName": "労働安全衛生関連法令",
-    "title": "安全衛生に関する総合情報（職場のあんぜんサイト）",
-    "stage": "consideration",
-    "description": "※【外国語ページの日本語表示について】本ページは、外国人労働者の方々を主な対象として、各言語で情報を掲載しています。日本語で内容を確認したい場合は、お使いのブラウザに搭載されている「日本語に翻訳」機能をご利用ください。ブラウザの翻訳機能を使用することで、ページ内容を日本語で表示できます。",
-    "officialUrl": "http://anzeninfo.mhlw.go.jp/",
-    "pdfUrls": [],
-    "promulgationDate": "2025-12-26"
-  },
-  {
-    "id": 6,
-    "lawName": "労働安全衛生関連法令",
-    "title": "安全衛生関係リーフレット等一覧",
-    "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/gyousei/anzen/index.html",
-    "pdfUrls": [
-      {
-        "name": "介護施設の労働者向け転倒防止リーフレット［504KB］",
-        "url": "https://www.mhlw.go.jp/content/001101745.pdf"
-      },
-      {
-        "name": "介護施設の事業者向け転倒防止リーフレット［723KB］",
-        "url": "https://www.mhlw.go.jp/content/001101744.pdf"
-      },
-      {
-        "name": "全産業の労働者向け転倒防止リーフレット［480KB］",
-        "url": "https://www.mhlw.go.jp/content/001101743.pdf"
-      },
-      {
-        "name": "全産業の事業者向け転倒防止リーフレット ［667KB］",
-        "url": "https://www.mhlw.go.jp/content/001101742.pdf"
-      },
-      {
-        "name": "外国人労働者向け安全衛生教育教材を労働災害防止にご活用ください［627KB］",
-        "url": "https://www.mhlw.go.jp/content/000815300.pdf"
-      }
-    ],
-    "promulgationDate": "2021-0４-0１"
-  },
-  {
-    "id": 7,
-    "lawName": "労働安全衛生関連法令",
-    "title": "労働災害発生状況・災害事例・安全衛生関係統計",
-    "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/toukei.html",
-    "pdfUrls": []
-  },
-  {
-    "id": 8,
-    "lawName": "労働安全衛生関連法令",
-    "title": "「安全衛生に係る優良事業場、団体又は功労者に対する厚生労働大臣表彰受賞者」名簿",
-    "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/jushou.html",
-    "pdfUrls": [
-      {
-        "name": "令和７年度大臣表彰受賞者名簿［158KB］",
-        "url": "https://www.mhlw.go.jp/content/001519955.pdf"
-      },
-      {
-        "name": "令和６年度大臣表彰受賞者名簿［343KB］",
-        "url": "https://www.mhlw.go.jp/content/001280710.pdf"
-      },
-      {
-        "name": "令和５年度大臣表彰受賞者名簿［380KB］",
-        "url": "https://www.mhlw.go.jp/content/001280709.pdf"
-      },
-      {
-        "name": "令和４年度大臣表彰受賞者名簿［428KB］",
-        "url": "https://www.mhlw.go.jp/content/001280711.pdf"
-      },
-      {
-        "name": "令和３年度大臣表彰受賞者名簿［387KB］",
-        "url": "https://www.mhlw.go.jp/content/000942593.pdf"
-      }
-    ]
-  },
-  {
-    "id": 9,
-    "lawName": "労働安全衛生関連法令",
-    "title": "労働安全衛生関係主要様式",
-    "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/anzeneisei36/index.html",
-    "pdfUrls": [
-      {
-        "name": "労働安全衛生法等の届出などをする際は、電子申請が便利です！＜リーフレット＞［934KB］",
-        "url": "https://www.mhlw.go.jp/content/0000197321_1.pdf"
-      },
-      {
-        "name": "社会保険労務士等が労働安全衛生法等に基づく手続について電子申請により提出代行を行う場合の取扱いについて（令和３年９月３０日付け基安計発0930第1号）［26KB］",
-        "url": "https://www.mhlw.go.jp/content/000964046.pdf"
-      }
-    ],
-    "promulgationDate": "2025-0１-0１"
-  },
-  {
-    "id": 10,
-    "lawName": "労働安全衛生関連法令",
-    "title": "労働安全衛生関係の免許・資格・講習・教育など",
-    "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/roudoukijun/anzeneisei10/qualificaton_education.html",
-    "pdfUrls": []
-  },
-  {
-    "id": 11,
-    "lawName": "労働安全衛生法",
-    "title": "労働安全衛生法に基づく新規化学物質関連手続き",
-    "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/anzeneisei06/index.html",
-    "pdfUrls": [
-      {
-        "name": "労働安全衛生法に基づく新規化学物質の届出等の電子申請について（令和６年12月27日付け基安化発1227第１号）［422KB］",
-        "url": "https://www.mhlw.go.jp/content/001366838.pdf"
-      },
-      {
-        "name": "労働安全衛生規則の一部を改正する省令の施行について（令和６年４月25日付け基発0425第１号）［113KB］",
-        "url": "https://www.mhlw.go.jp/content/001365172.pdf"
-      },
-      {
-        "name": "少量新規化学物質の確認申請における確認調査票の廃止について（令和３年12月20日付け基安化発1220第１号）［PDF形式：65KB］［65KB］",
-        "url": "https://www.mhlw.go.jp/content/000869737.pdf"
-      },
-      {
-        "name": "バイオテクノロジー応用医薬品に係る有害性調査について（令和2年4月6日付け基安化発0406第3号）［PDF形式：100KB］［101KB］",
-        "url": "https://www.mhlw.go.jp/content/000618018.pdf"
-      },
-      {
-        "name": "労働安全衛生法に基づく新規化学物質の手続の簡素化について（平成24年11月12日付け基安化発1112第２号）［PDF形式：309KB］",
-        "url": "https://www.mhlw.go.jp/bunya/roudoukijun/anzeneisei06/pdf/h24-1112-02.pdf"
-      }
-    ],
-    "promulgationDate": "2024-12-27"
-  },
-  {
-    "id": 12,
-    "lawName": "労働安全衛生関連法令",
-    "title": "安全衛生優良企業公表制度について",
-    "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000075611.html",
-    "pdfUrls": []
-  },
-  {
-    "id": 13,
-    "lawName": "労働安全衛生法",
-    "title": "働き方改革関連法（労働安全衛生法改正を含む）",
-    "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000148322.html",
-    "pdfUrls": [
-      {
-        "name": "「短時間・有期雇用労働者及び派遣労働者に対する不合理な待遇の禁止等に関する指針案」等の答申（平成30年12月21日）［191KB］",
-        "url": "https://www.mhlw.go.jp/content/000475499.pdf"
-      },
-      {
-        "name": "概要［967KB］",
-        "url": "https://www.mhlw.go.jp/content/000332869.pdf"
-      },
-      {
-        "name": "法律条文［336KB］",
-        "url": "https://www.mhlw.go.jp/content/000307765.pdf"
-      },
-      {
-        "name": "法律新旧対照条文［795KB］",
-        "url": "https://www.mhlw.go.jp/content/000307766.pdf"
-      },
-      {
-        "name": "概要［PDF形式：907KB］",
-        "url": "https://www.mhlw.go.jp/topics/bukyoku/soumu/houritu/dl/196-31.pdf"
-      }
-    ]
-  },
-  {
-    "id": 14,
-    "lawName": "労働安全衛生法",
-    "title": "労働安全衛生法の改正（平成26年法律第82号）",
-    "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/an-eihou/index.html",
-    "pdfUrls": [
-      {
-        "name": "概要［1.2MB］",
-        "url": "https://www.mhlw.go.jp/content/11300000/0000049215.pdf"
-      },
-      {
-        "name": "要綱［120KB］",
-        "url": "https://www.mhlw.go.jp/content/11300000/0000049219.pdf"
-      },
-      {
-        "name": "条文［150KB］",
-        "url": "https://www.mhlw.go.jp/content/11300000/0000049223.pdf"
-      },
-      {
-        "name": "新旧対照条文［329KB］",
-        "url": "https://www.mhlw.go.jp/content/11300000/0000049225.pdf"
-      },
-      {
-        "name": "概要［803KB］",
-        "url": "https://www.mhlw.go.jp/content/11300000/0000064468.pdf"
-      }
-    ]
-  },
-  {
-    "id": 15,
-    "lawName": "労働安全衛生関連法令",
-    "title": "職場における安全対策について",
-    "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/anzeneisei01.html",
-    "pdfUrls": [
-      {
-        "name": "平成25年10月１日から、機械の「調整の作業」が、機械の運転停止義務の範囲に追加されます（安衛則第１０７条）［PDF形式：605KB］",
-        "url": "https://www.mhlw.go.jp/bunya/roudoukijun/dl/pamphlet_107_0919.pdf"
-      },
-      {
-        "name": "機械による労働災害防止対策を強化するため労働安全衛生規則を改正しました（プレス機械対策を中心に）［PDF形式：483KB］",
-        "url": "https://www.mhlw.go.jp/bunya/roudoukijun/dl/pamphlet_0415.pdf"
-      },
-      {
-        "name": "産業用ロボットと人との協働作業が可能となる安全基準を明確化しました。（安衛則第１５０条の４関係）［PDF形式：634KB］",
-        "url": "https://www.mhlw.go.jp/bunya/roudoukijun/dl/pamphlet_140115.pdf"
-      }
-    ]
-  },
-  {
-    "id": 16,
-    "lawName": "労働安全衛生関連法令",
-    "title": "職場における労働衛生対策について",
-    "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/anzeneisei02.html",
-    "pdfUrls": [
-      {
-        "name": "団体経由産業保健活動推進助成金のご案内（リーフレット）［250KB］",
-        "url": "https://www.mhlw.go.jp/content/001492510.pdf"
-      },
-      {
-        "name": "<https://www.johas.go.jp/Portals/0/data0/sanpo/jyoseikin/dantaikeiyu/R5dantai_josei_accoun_manual.pdf",
-        "url": "https://www.johas.go.jp/Portals/0/data0/sanpo/jyoseikin/dantaikeiyu/R5dantai_josei_accoun_manual.pdf"
-      },
-      {
-        "name": "産業医について（リーフレット）［PDF形式：175KB］",
-        "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11200000-Roudoukijunkyoku/0000103897.pdf"
-      },
-      {
-        "name": "「産業医・産業保健機能」と「長時間労働者に対する面接指導等」が強化されます［PDF形式：1,686KB］［1.7MB］",
-        "url": "https://www.mhlw.go.jp/content/000496107.pdf"
-      },
-      {
-        "name": "産業医　基礎研修カリキュラム　研修目標［PDF形式：251KB］［251KB］",
-        "url": "https://www.mhlw.go.jp/content/000396499.pdf"
-      }
-    ],
-    "promulgationDate": "2025-0５-２３"
-  },
-  {
-    "id": 17,
-    "lawName": "労働安全衛生関連法令",
-    "title": "職場における化学物質対策について",
-    "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/anzeneisei03.html",
-    "pdfUrls": [],
-    "promulgationDate": "2026-0１-29"
-  },
-  {
-    "id": 18,
-    "lawName": "労働安全衛生関連法令",
-    "title": "リスクアセスメント等関連資料・教材一覧",
-    "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/anzeneisei14/index.html",
-    "pdfUrls": [
-      {
-        "name": "危険性又は有害性等の調査等に関する指針［126KB］",
-        "url": "https://www.mhlw.go.jp/content/11300000/001393656.pdf"
-      },
-      {
-        "name": "本文［336KB］",
-        "url": "https://www.mhlw.go.jp/content/11300000/001393608.pdf"
-      },
-      {
-        "name": "別添１［18KB］",
-        "url": "https://www.mhlw.go.jp/content/11300000/001393609.pdf"
-      },
-      {
-        "name": "別添２［184KB］",
-        "url": "https://www.mhlw.go.jp/content/11300000/001393610.pdf"
-      },
-      {
-        "name": "別添３［28KB］",
-        "url": "https://www.mhlw.go.jp/content/11300000/001393611.pdf"
-      }
-    ]
-  },
-  {
-    "id": 19,
-    "lawName": "労働安全衛生関連法令",
-    "title": "労働安全衛生マネジメントシステムについて",
-    "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/newpage_05821.html",
-    "pdfUrls": [
-      {
-        "name": "1～7ページ",
-        "url": "https://www.mhlw.go.jp/content/11200000/000591673.pdf"
-      },
-      {
-        "name": "8～16ページ",
-        "url": "https://www.mhlw.go.jp/content/11200000/000591721.pdf"
-      },
-      {
-        "name": "全体版",
-        "url": "https://www.mhlw.go.jp/content/11200000/000591723.pdf"
-      },
-      {
-        "name": "全文",
-        "url": "https://www.mhlw.go.jp/content/11200000/000591670.pdf"
-      },
-      {
-        "name": "新旧対照表",
-        "url": "https://www.mhlw.go.jp/content/11200000/000591671.pdf"
-      }
-    ]
-  },
-  {
-    "id": 20,
-    "lawName": "労働安全衛生関連法令",
-    "title": "職場における受動喫煙防止対策について",
-    "stage": "consideration",
-    "description": "このページではJavaScriptを使用しています。JavaScriptを有効にしてください。 ",
-    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/kitsuen/index.html",
-    "pdfUrls": [
-      {
-        "name": "職場における受動喫煙防止のためのガイドライン［650KB］",
-        "url": "https://www.mhlw.go.jp/content/000524718.pdf"
-      },
-      {
-        "name": "「受動喫煙防止対策助成金」のご案内（令和７年度版）［398KB］",
-        "url": "https://www.mhlw.go.jp/content/001500037.pdf"
-      },
-      {
-        "name": "［999KB］",
-        "url": "https://www.mhlw.go.jp/content/000524558.pdf"
-      },
-      {
-        "name": "平成25年度（対象：労働者）［PDF形式：400KB］",
-        "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11200000-Roudoukijunkyoku/0000050168.pdf"
-      },
-      {
-        "name": "平成26年度（対象：事業主）［PDF形式：733KB］",
-        "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11200000-Roudoukijunkyoku/0000091750.pdf"
-      }
-    ],
-    "promulgationDate": "2020-0４-0１"
+    "title": "化学物質規制の見直し",
+    "stage": "enforcement_scheduled",
+    "description": "約2,450物質に対するリスクアセスメント義務化",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000099121_00005.html",
+    "source": "重要トピック",
+    "collectedDate": "2026-02-03"
   }
 ]
