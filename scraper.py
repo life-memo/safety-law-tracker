@@ -265,9 +265,17 @@ def main():
     
     print(f"\n生成された改正情報: {len(revisions)}件")
     
-    # 改正リストを保存（GitHub Actionsが使用）
-    with open('revisions_list.json', 'w', encoding='utf-8') as f:
-        json.dump(revisions, f, ensure_ascii=False, indent=2)
+import os
+
+# 保存先フォルダを作る
+os.makedirs("public/data", exist_ok=True)
+
+# 改正リストを保存（フロントが読む場所）
+with open("public/data/revisions.json", "w", encoding="utf-8") as f:
+    json.dump(revisions, f, ensure_ascii=False, indent=2)
+
+print("生成: public/data/revisions.json")
+
     
     print("\n処理が完了しました！")
     print("生成されたファイル:")
