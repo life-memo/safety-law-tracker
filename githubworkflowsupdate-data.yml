@@ -1,0 +1,60 @@
+name: Update Law Data
+
+on:
+  schedule:
+    - cron: '0 23 * * *'  # 毎日午前8時（JST）
+  workflow_dispatch:
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: pip install beautifulsoup4 requests lxml
+    
+    - name: Create data directory
+      run: mkdir -p public/data
+    
+    - name: Run scraper
+      run: |
+        python scraper.py
+        if [ -f "revisions_list.json" ]; then
+          mv revisions_list.json public/data/revisions.json
+          echo "✅ データ収集成功"
+        else
+          echo "❌ エラー"
+          exit 1
+        fi
+    
+    - name: Commit changes
+      run: |
+        git config user.name 'github-actions[bot]'
+        git config user.email 'github-actions[bot]@users.noreply.github.com'
+        
+        # .gitignoreを一時的に無効化してファイルを追加
+        git add -f public/data/revisions.json
+        
+        # 変更があるか確認
+        if git diff --staged --quiet; then
+          echo "ℹ️ データに変更はありませんでした"
+        else
+          git commit -m "🤖 自動更新: $(date +'%Y-%m-%d')"
+          git push
+          echo "✅ データを更新しました"
+        fi
+    
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: law-data
+        path: public/data/revisions.json
+        retention-days: 7
