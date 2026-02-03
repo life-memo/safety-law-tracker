@@ -39,15 +39,14 @@ jobs:
     
     - name: Run scraper
       run: |
-        echo "データ収集開始: $(date)"
+        echo "# JSONファイルの生成を確認"
         python scraper.py
         
         # JSONファイルを public/data/ に移動
-        if [ -f "revisions_list.json" ]; then
-          mv revisions_list.json public/data/revisions.json
-          echo "✅ データ収集成功"
+        if [ -f "public/data/revisions.json" ]; then
+        echo "✅ データ収集成功"
         else
-          echo "❌ エラー: revisions_list.json が生成されませんでした"
+          echo "❌ エラー: public/data/revisions.json が生成されませんでした"
           exit 1
         fi
     
