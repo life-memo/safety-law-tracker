@@ -275,8 +275,6 @@ with open("public/data/revisions.json", "w", encoding="utf-8") as f:
     json.dump(revisions, f, ensure_ascii=False, indent=2)
 
 print("生成: public/data/revisions.json")
-
-    
     print("\n処理が完了しました！")
     print("生成されたファイル:")
     print("  - revisions_list.json: 整形済み改正情報リスト")
