@@ -203,8 +203,15 @@ class SafetyLawScraper:
         
         return data
     
-    def save_to_json(self, data: Dict, filename: str = 'law_revisions_data.json'):
+    def save_to_json(self, data: Dict, filename: str = 'revisions_list.json'):
         """収集したデータをJSONファイルに保存"""
+        import os
+        
+        # ディレクトリが存在しない場合は作成
+        directory = os.path.dirname(filename)
+        if directory and not os.path.exists(directory):
+            os.makedirs(directory, exist_ok=True)
+        
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
         print(f"\nデータを {filename} に保存しました")
@@ -253,21 +260,17 @@ def main():
     # データ収集
     data = scraper.collect_all_data()
     
-    # JSONに保存
-    scraper.save_to_json(data)
-    
     # 改正リストを生成
     revisions = scraper.generate_revision_list(data)
     
     print(f"\n生成された改正情報: {len(revisions)}件")
     
-    # 改正リストも保存
+    # 改正リストを保存（GitHub Actionsが使用）
     with open('revisions_list.json', 'w', encoding='utf-8') as f:
         json.dump(revisions, f, ensure_ascii=False, indent=2)
     
     print("\n処理が完了しました！")
     print("生成されたファイル:")
-    print("  - law_revisions_data.json: 収集した生データ")
     print("  - revisions_list.json: 整形済み改正情報リスト")
 
 
