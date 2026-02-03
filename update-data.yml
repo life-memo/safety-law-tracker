@@ -1,0 +1,79 @@
+name: Update Law Data
+
+on:
+  schedule:
+    # 毎日午前8時（日本時間）に実行
+    # UTCで23時 = JST 8時（+9時間）
+    - cron: '0 23 * * *'
+  
+  workflow_dispatch:  # 手動実行も可能
+  
+  push:
+    branches:
+      - main
+    paths:
+      - 'scraper.py'  # スクレイパーが更新された時も実行
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: |
+        pip install beautifulsoup4==4.12.2 requests==2.31.0 lxml==4.9.3
+    
+    - name: Create data directory
+      run: |
+        mkdir -p public/data
+    
+    - name: Run scraper
+      run: |
+        echo "データ収集開始: $(date)"
+        python scraper.py
+        
+        # JSONファイルを public/data/ に移動
+        if [ -f "revisions_list.json" ]; then
+          mv revisions_list.json public/data/revisions.json
+          echo "✅ データ収集成功"
+        else
+          echo "❌ エラー: revisions_list.json が生成されませんでした"
+          exit 1
+        fi
+    
+    - name: Check if data changed
+      id: check_changes
+      run: |
+        git diff --quiet public/data/revisions.json || echo "changed=true" >> $GITHUB_OUTPUT
+    
+    - name: Commit and push if changed
+      if: steps.check_changes.outputs.changed == 'true'
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add public/data/revisions.json
+        git commit -m "🤖 自動更新: 法令改正データ $(date +'%Y-%m-%d %H:%M')"
+        git push
+    
+    - name: No changes detected
+      if: steps.check_changes.outputs.changed != 'true'
+      run: |
+        echo "ℹ️ データに変更はありませんでした"
+    
+    - name: Upload artifact (for debugging)
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: law-data
+        path: public/data/revisions.json
+        retention-days: 7
