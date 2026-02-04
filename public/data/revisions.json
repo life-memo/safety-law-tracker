@@ -30,7 +30,22 @@
     "lawNo": "昭和五十四年労働省令第十八号"
   },
   {
-    "id": 5,
+    "id": 3,
+    "lawName": "クレーン等安全規則",
+    "title": "クレーン等安全規則",
+    "stage": "enforcement_scheduled",
+    "description": "改正法令: 労働安全衛生法及び作業環境測定法の一部を改正する法律の一部の施行に伴う関係省令の整備等に関する省令",
+    "officialUrl": "https://elaws.e-gov.go.jp/document?lawid=347M50002000034",
+    "source": "e-Gov法令API v2",
+    "collectedDate": "2026-02-04",
+    "publishedDate": "2026-02-04",
+    "promulgationDate": "1972-09-30",
+    "enforcementDate": "2026-04-01",
+    "lawId": "347M50002000034",
+    "lawNo": "昭和四十七年労働省令第三十四号"
+  },
+  {
+    "id": 6,
     "lawName": "石綿障害予防規則",
     "title": "石綿障害予防規則",
     "stage": "enforcement_scheduled",
@@ -45,7 +60,7 @@
     "lawNo": "平成十七年厚生労働省令第二十一号"
   },
   {
-    "id": 6,
+    "id": 7,
     "lawName": "東日本大震災により生じた放射性物質により汚染された土壌等を除染するための業務等に係る電離放射線障害防止規則",
     "title": "東日本大震災により生じた放射性物質により汚染された土壌等を除染するための業務等に係る電離放射線障害防止規則",
     "stage": "enforcement_scheduled",
@@ -60,7 +75,7 @@
     "lawNo": "平成二十三年厚生労働省令第百五十二号"
   },
   {
-    "id": 7,
+    "id": 8,
     "lawName": "労働安全衛生法に基づく製造時等検査及び型式検定の手数料の加算額の計算に関する省令",
     "title": "労働安全衛生法に基づく製造時等検査及び型式検定の手数料の加算額の計算に関する省令",
     "stage": "enforcement_scheduled",
@@ -75,7 +90,7 @@
     "lawNo": "昭和五十八年労働省令第二十五号"
   },
   {
-    "id": 8,
+    "id": 9,
     "lawName": "じん肺法施行規則",
     "title": "じん肺法施行規則",
     "stage": "enforcement_scheduled",
@@ -90,7 +105,7 @@
     "lawNo": "昭和三十五年労働省令第六号"
   },
   {
-    "id": 9,
+    "id": 10,
     "lawName": "有機溶剤中毒予防規則",
     "title": "有機溶剤中毒予防規則",
     "stage": "enforcement_scheduled",
@@ -105,7 +120,7 @@
     "lawNo": "昭和四十七年労働省令第三十六号"
   },
   {
-    "id": 10,
+    "id": 11,
     "lawName": "特定化学物質障害予防規則",
     "title": "特定化学物質障害予防規則",
     "stage": "enforcement_scheduled",
@@ -120,7 +135,7 @@
     "lawNo": "昭和四十七年労働省令第三十九号"
   },
   {
-    "id": 11,
+    "id": 12,
     "lawName": "電離放射線障害防止規則",
     "title": "電離放射線障害防止規則",
     "stage": "enforcement_scheduled",
@@ -135,7 +150,7 @@
     "lawNo": "昭和四十七年労働省令第四十一号"
   },
   {
-    "id": 13,
+    "id": 14,
     "lawName": "四アルキル鉛中毒予防規則",
     "title": "四アルキル鉛中毒予防規則",
     "stage": "enforcement_scheduled",
@@ -150,7 +165,7 @@
     "lawNo": "昭和四十七年労働省令第三十八号"
   },
   {
-    "id": 16,
+    "id": 17,
     "lawName": "酸素欠乏症等防止規則",
     "title": "酸素欠乏症等防止規則",
     "stage": "enforcement_scheduled",
@@ -165,7 +180,7 @@
     "lawNo": "昭和四十七年労働省令第四十二号"
   },
   {
-    "id": 17,
+    "id": 18,
     "lawName": "ボイラー及び圧力容器安全規則",
     "title": "ボイラー及び圧力容器安全規則",
     "stage": "enforcement_scheduled",
@@ -180,7 +195,7 @@
     "lawNo": "昭和四十七年労働省令第三十三号"
   },
   {
-    "id": 18,
+    "id": 19,
     "lawName": "高気圧作業安全衛生規則",
     "title": "高気圧作業安全衛生規則",
     "stage": "enforcement_scheduled",
@@ -195,7 +210,7 @@
     "lawNo": "昭和四十七年労働省令第四十号"
   },
   {
-    "id": 19,
+    "id": 20,
     "lawName": "作業環境測定法施行規則",
     "title": "作業環境測定法施行規則",
     "stage": "enforcement_scheduled",
@@ -210,7 +225,7 @@
     "lawNo": "昭和五十年労働省令第二十号"
   },
   {
-    "id": 20,
+    "id": 21,
     "lawName": "石綿による健康被害の救済に関する法律",
     "title": "石綿による健康被害の救済に関する法律",
     "stage": "enforced",
@@ -225,7 +240,7 @@
     "lawNo": "平成十八年法律第四号"
   },
   {
-    "id": 24,
+    "id": 25,
     "lawName": "化学物質の審査及び製造等の規制に関する法律施行令",
     "title": "化学物質の審査及び製造等の規制に関する法律施行令",
     "stage": "enforced",
@@ -240,7 +255,7 @@
     "lawNo": "昭和四十九年政令第二百二号"
   },
   {
-    "id": 26,
+    "id": 27,
     "lawName": "労働安全衛生関連法令",
     "title": "労働組合法施行令の一部を改正する政令案に関する御意見の募集について",
     "stage": "public_comment",
@@ -251,7 +266,7 @@
     "publishedDate": "2026-02-04"
   },
   {
-    "id": 27,
+    "id": 28,
     "lawName": "労働安全衛生関連法令",
     "title": "高年齢労働者の安全衛生対策（エイジフレンドリーガイドライン）",
     "stage": "enforced",
@@ -261,7 +276,7 @@
     "collectedDate": "2026-02-04"
   },
   {
-    "id": 28,
+    "id": 29,
     "lawName": "労働安全衛生関連法令",
     "title": "化学物質規制の見直し（第2段階・約850物質追加）",
     "stage": "enforcement_scheduled",
@@ -272,7 +287,7 @@
     "enforcementDate": "2026-04-01"
   },
   {
-    "id": 29,
+    "id": 30,
     "lawName": "労働安全衛生関連法令",
     "title": "石綿障害予防規則の改正",
     "stage": "enforced",
