@@ -12,6 +12,7 @@ import time
 import re
 import feedparser
 import xml.etree.ElementTree as ET
+import urllib.parse
 from typing import Dict, List
 from datetime import datetime, date, timedelta
 
@@ -78,16 +79,33 @@ class EgovAPIScraper:
                     amend_name = info.findtext("AmendName", default="").strip()
                     law_no = info.findtext("LawNo", default="").strip()
                     
+                    # 日付をYYYY-MM-DD形式に変換
+                    promulg_date = ""
+                    if promulg and len(promulg) == 8:
+                        promulg_date = f"{promulg[:4]}-{promulg[4:6]}-{promulg[6:]}"
+                    
+                    enf_date = ""
+                    if enforcement and len(enforcement) == 8:
+                        enf_date = f"{enforcement[:4]}-{enforcement[4:6]}-{enforcement[6:]}"
+                    
                     # 施行日があれば「施行予定」、なければ「公布済み」
                     stage = "enforcement_scheduled" if enforcement else "promulgated"
                     if enforcement:
                         # 施行日が過去なら「施行済み」
                         try:
-                            enf_date = datetime.strptime(enforcement, "%Y%m%d")
-                            if enf_date < datetime.now():
+                            enf_datetime = datetime.strptime(enforcement, "%Y%m%d")
+                            if enf_datetime < datetime.now():
                                 stage = "enforced"
                         except:
                             pass
+                    
+                    # 法令番号から詳細ページURLを生成
+                    detail_url = "https://laws.e-gov.go.jp/"
+                    if law_no:
+                        # 法令番号をURLエンコード（例：昭和四十七年労働省令第三十二号）
+                        import urllib.parse
+                        encoded_no = urllib.parse.quote(law_no)
+                        detail_url = f"https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/viewContents?lawId={encoded_no}"
                     
                     revisions.append({
                         "title": law_name,
@@ -96,10 +114,10 @@ class EgovAPIScraper:
                         "source": "e-Gov更新法令一覧API",
                         "stage": stage,
                         "publishedDate": f"{d[:4]}-{d[4:6]}-{d[6:8]}",
-                        "officialUrl": "https://laws.e-gov.go.jp/",
+                        "officialUrl": detail_url,
                         "lawNo": law_no,
-                        "promulgationDate": promulg,
-                        "enforcementDate": enforcement,
+                        "promulgationDate": promulg_date,
+                        "enforcementDate": enf_date,
                     })
                 
                 time.sleep(0.5)
