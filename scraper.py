@@ -30,6 +30,16 @@ class EgovAPIScraper:
             r"労働基準|労働契約)"
         )
     
+    def clean_html(self, text: str) -> str:
+        """HTMLタグを削除してクリーンなテキストに"""
+        if not text:
+            return ""
+        # HTMLタグを削除
+        text = re.sub(r'<[^>]+>', ' ', text)
+        # 余分な空白を削除
+        text = re.sub(r'\s+', ' ', text)
+        return text.strip()
+    
     def parse_feed(self, url: str):
         """RSSフィードを確実に取得"""
         try:
@@ -153,10 +163,52 @@ class EgovAPIScraper:
                     "publishedDate": self.parse_date(published),
                     "source": "e-Govパブコメ（労働）",
                     "stage": "public_comment",
-                    "description": summary[:300],
+                    "description": self.clean_html(summary)[:300],
                 })
         
         return revisions
+    
+    def fetch_kanpo_info(self) -> List[Dict]:
+        """国立印刷局 官報情報を取得"""
+        print("\n[官報] 国立印刷局")
+        print("-" * 60)
+        
+        revisions = []
+        
+        # 官報検索サービスのRSS
+        kanpo_rss_url = "https://kanpou.npb.go.jp/rss/kanpou.rss"
+        
+        try:
+            feed = self.parse_feed(kanpo_rss_url)
+            
+            for entry in feed.entries[:100]:  # 最新100件
+                title = entry.get("title", "")
+                link = entry.get("link", "")
+                published = entry.get("published", "")
+                description = entry.get("description", "")
+                
+                # 労働安全衛生関連をフィルタ
+                full_text = title + " " + description
+                if not self.safety_regex.search(full_text):
+                    continue
+                
+                # 公布・改正に関するキーワードでフィルタ
+                if any(keyword in full_text for keyword in ['公布', '改正', '省令', '規則', '告示']):
+                    revisions.append({
+                        "title": title,
+                        "url": link,
+                        "publishedDate": self.parse_date(published),
+                        "source": "官報",
+                        "stage": "promulgated",
+                        "description": self.clean_html(description)[:300],
+                    })
+            
+            print(f"  取得: {len(revisions)}件（労働安全衛生フィルタ後）")
+            return revisions
+            
+        except Exception as e:
+            print(f"  エラー: {e}")
+            return []
     
     def fetch_specific_topics(self) -> List[Dict]:
         """重要トピック（手動キュレーション）"""
@@ -168,7 +220,7 @@ class EgovAPIScraper:
                 "title": "高年齢労働者の安全衛生対策（エイジフレンドリーガイドライン）",
                 "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/newpage_00007.html",
                 "stage": "enforced",
-                "description": "70歳以上の労働者に対する特別な安全衛生対策",
+                "description": "60歳以上の高年齢労働者に対する安全衛生対策の実施を推進",
                 "lawName": "労働安全衛生法",
             },
             {
@@ -230,7 +282,12 @@ class EgovAPIScraper:
         all_data.extend(pubcom_data)
         time.sleep(1)
         
-        # 3. 重要トピック（手動）
+        # 3. 官報情報
+        kanpo_data = self.fetch_kanpo_info()
+        all_data.extend(kanpo_data)
+        time.sleep(1)
+        
+        # 4. 重要トピック（手動）
         topics_data = self.fetch_specific_topics()
         all_data.extend(topics_data)
         
@@ -266,8 +323,12 @@ class EgovAPIScraper:
             
             # 日付情報
             for date_field in ['publishedDate', 'promulgationDate', 'enforcementDate']:
-                if item.get(date_field):
-                    revision[date_field] = item[date_field]
+                date_value = item.get(date_field)
+                if date_value and date_value != "":
+                    # YYYYMMDD形式の場合はYYYY-MM-DDに変換
+                    if len(str(date_value)) == 8 and str(date_value).isdigit():
+                        date_value = f"{date_value[:4]}-{date_value[4:6]}-{date_value[6:]}"
+                    revision[date_field] = date_value
             
             revisions.append(revision)
         
