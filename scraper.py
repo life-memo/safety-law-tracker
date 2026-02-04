@@ -153,38 +153,60 @@ class CompleteScraper:
         return revisions
     
     def fetch_kanpo_gov(self) -> List[Dict]:
-        """官報発行サイト（内閣府）"""
-        print("\n[官報] 官報発行サイト")
+        """官報情報（非公式RSS）"""
+        print("\n[官報] 官報RSS（非公式）")
         print("-" * 60)
         
         revisions = []
         
-        # 官報RSS
-        kanpo_rss = "https://kanpou.npb.go.jp/rss/kanpou.rss"
-        feed = self.parse_feed(kanpo_rss)
-        
-        for entry in feed.entries[:100]:
-            title = entry.get("title", "")
-            link = entry.get("link", "")
-            published = entry.get("published", "")
-            description = entry.get("description", "")
+        try:
+            # 官報RSS（非公式 - testkun08080氏のGitHubベース）
+            kanpo_urls = [
+                "https://testkun08080.github.io/kanpo-rss/feed.xml",
+                "https://testkun08080.github.io/kanpo-rss/feed_toc.xml",
+            ]
             
-            full_text = title + " " + description
-            if not self.safety_regex.search(full_text):
-                continue
+            feed = None
+            for url in kanpo_urls:
+                try:
+                    feed = self.parse_feed(url)
+                    if hasattr(feed, 'entries') and len(feed.entries) > 0:
+                        print(f"  使用RSS: {url}")
+                        break
+                except:
+                    continue
             
-            if any(kw in full_text for kw in ['公布', '改正', '省令', '規則', '告示']):
-                revisions.append({
-                    "title": title,
-                    "officialUrl": link,
-                    "publishedDate": self.parse_date(published),
-                    "source": "官報",
-                    "stage": "promulgated",
-                    "description": self.clean_html(description)[:300],
-                })
-        
-        print(f"  合計: {len(revisions)}件")
-        return revisions
+            if not feed or not hasattr(feed, 'entries'):
+                print("  官報RSSが取得できませんでした。スキップします。")
+                return []
+            
+            for entry in feed.entries[:100]:
+                title = entry.get("title", "")
+                link = entry.get("link", "")
+                published = entry.get("published", "")
+                description = entry.get("description", "") or entry.get("summary", "")
+                
+                full_text = title + " " + description
+                if not self.safety_regex.search(full_text):
+                    continue
+                
+                if any(kw in full_text for kw in ['公布', '改正', '省令', '規則', '告示']):
+                    revisions.append({
+                        "title": title,
+                        "officialUrl": link,
+                        "publishedDate": self.parse_date(published),
+                        "source": "官報（非公式RSS）",
+                        "stage": "promulgated",
+                        "description": self.clean_html(description)[:300],
+                    })
+            
+            print(f"  合計: {len(revisions)}件")
+            return revisions
+            
+        except Exception as e:
+            print(f"  エラー: {e}")
+            print("  官報情報の取得をスキップします")
+            return []
     
     def fetch_anzeninfo_mhlw(self) -> List[Dict]:
         """職場のあんぜんサイト - 法令改正一覧"""
