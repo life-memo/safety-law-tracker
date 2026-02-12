@@ -117,7 +117,7 @@ const sampleRevisions = [
     lawName: "労働安全衛生法及び作業環境測定法",
     title: "労働安全衛生法及び作業環境測定法の一部を改正する法律（令和7年法律第33号）",
     stage: "promulgated",
-    promulgationDate: "2025-05-14",
+    publishedDate: "2025-05-14",
     enforcementDate: "2026-04-01",
     description: "個人事業者等に対する安全衛生対策の推進、50人未満事業場でのストレスチェック義務化など",
     officialUrl: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/an-eihou/index_00001.html",
@@ -132,7 +132,7 @@ const sampleRevisions = [
     lawName: "労働安全衛生規則",
     title: "労働安全衛生規則の一部改正（熱中症対策の強化）",
     stage: "enforced",
-    promulgationDate: "2025-05-20",
+    publishedDate: "2025-05-20",
     enforcementDate: "2025-06-01",
     description: "職場における熱中症対策の強化について、WBGT値に基づく予防措置の義務化",
     officialUrl: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/index.html"
@@ -142,7 +142,7 @@ const sampleRevisions = [
     lawName: "特定化学物質障害予防規則等",
     title: "化学物質による労働災害防止のための新たな規制",
     stage: "enforcement_scheduled",
-    promulgationDate: "2024-02-24",
+    publishedDate: "2024-02-24",
     enforcementDate: "2026-04-01",
     description: "ラベル表示・SDS交付義務対象物質の追加（約700物質追加、合計約1,600物質）",
     officialUrl: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000099121_00005.html",
@@ -382,7 +382,16 @@ function SafetyLawTracker() {
                       <h3 className="text-lg font-bold text-gray-800 mb-1">{revision.title}</h3>
                       {showLawName && <p className="text-sm text-gray-600 mb-2">{revision.lawName}</p>}
                       <p className="text-gray-700">{revision.description}</p>
-                      
+
+                      {revision.stage === "public_comment" && revision.deadlineDate && (
+                        <div className="mt-2 inline-flex items-center gap-2 px-3 py-1 bg-red-50 border border-red-200 rounded-lg">
+                          <AlertCircle size={14} className="text-red-500" />
+                          <span className="text-sm font-medium text-red-700">
+                            意見募集締切: {formatDate(revision.deadlineDate)}
+                          </span>
+                        </div>
+                      )}
+
                       {revision.highlights && revision.highlights.length > 0 && (
                         <div className="mt-3 bg-blue-50 rounded-lg p-3">
                           <p className="text-sm font-bold text-blue-900 mb-1">主なポイント：</p>
@@ -399,19 +408,47 @@ function SafetyLawTracker() {
                   {isExpanded && (
                     <div className="mt-4 pt-4 border-t border-gray-200">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        {revision.promulgationDate && (
-                          <div className="flex items-center gap-2 text-sm">
-                            <CheckCircle size={16} className="text-green-500" />
-                            <span className="font-medium">公布日:</span>
-                            <span>{formatDate(revision.promulgationDate)}</span>
-                          </div>
-                        )}
-                        {revision.enforcementDate && (
-                          <div className="flex items-center gap-2 text-sm">
-                            <Clock size={16} className="text-purple-500" />
-                            <span className="font-medium">施行日:</span>
-                            <span className="font-bold">{formatDate(revision.enforcementDate)}</span>
-                          </div>
+                        {revision.stage === "public_comment" ? (
+                          <>
+                            {revision.announcementDate && (
+                              <div className="flex items-center gap-2 text-sm">
+                                <CheckCircle size={16} className="text-blue-500" />
+                                <span className="font-medium">公示日:</span>
+                                <span>{formatDate(revision.announcementDate)}</span>
+                              </div>
+                            )}
+                            {revision.deadlineDate && (
+                              <div className="flex items-center gap-2 text-sm">
+                                <AlertCircle size={16} className="text-red-500" />
+                                <span className="font-medium">意見募集締切:</span>
+                                <span className="font-bold text-red-600">{formatDate(revision.deadlineDate)}</span>
+                              </div>
+                            )}
+                            {revision.ministry && (
+                              <div className="flex items-center gap-2 text-sm col-span-full">
+                                <FileText size={16} className="text-gray-500" />
+                                <span className="font-medium">所管:</span>
+                                <span>{revision.ministry}</span>
+                              </div>
+                            )}
+                          </>
+                        ) : (
+                          <>
+                            {revision.publishedDate && (
+                              <div className="flex items-center gap-2 text-sm">
+                                <CheckCircle size={16} className="text-green-500" />
+                                <span className="font-medium">改正公布日:</span>
+                                <span>{formatDate(revision.publishedDate)}</span>
+                              </div>
+                            )}
+                            {revision.enforcementDate && (
+                              <div className="flex items-center gap-2 text-sm">
+                                <Clock size={16} className="text-purple-500" />
+                                <span className="font-medium">施行日:</span>
+                                <span className="font-bold">{formatDate(revision.enforcementDate)}</span>
+                              </div>
+                            )}
+                          </>
                         )}
                       </div>
                       <a
@@ -422,7 +459,7 @@ function SafetyLawTracker() {
                         onClick={(e) => e.stopPropagation()}
                       >
                         <FileText size={16} />
-                        厚生労働省の公式ページ
+                        {revision.stage === "public_comment" ? "意見募集ページ (e-Gov)" : "公式ページ"}
                         <ExternalLink size={14} />
                       </a>
                     </div>

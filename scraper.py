@@ -112,7 +112,7 @@ class CompleteScraper:
                         "source": "e-Gov法令API v2",
                         "stage": stage,
                         "publishedDate": f"{d[:4]}-{d[4:6]}-{d[6:8]}",
-                        "promulgationDate": promulg_date,
+                        "originalPromulgationDate": promulg_date,
                         "enforcementDate": enf_date,
                         "officialUrl": detail_url,
                     })
@@ -125,31 +125,77 @@ class CompleteScraper:
         print(f"  合計: {len(revisions)}件")
         return revisions
     
+    def parse_pubcom_description(self, summary: str) -> Dict:
+        """パブコメのdescriptionから構造化データを抽出"""
+        text = self.clean_html(summary)
+        result = {}
+
+        # 案の公示日
+        m = re.search(r'案の公示日[：:]?\s*(\d{4}[/\-]\d{1,2}[/\-]\d{1,2})', text)
+        if m:
+            result['announcementDate'] = m.group(1).replace('/', '-')
+
+        # 受付締切日時
+        m = re.search(r'受付締切日時[：:]?\s*(\d{4}[/\-]\d{1,2}[/\-]\d{1,2})', text)
+        if m:
+            result['deadlineDate'] = m.group(1).replace('/', '-')
+
+        # 問合せ先（所管省庁）
+        m = re.search(r'問合せ先[（(]所管省庁[・･]部局名等[)）][：:]?\s*(.+?)(?:\s+電話|$)', text)
+        if m:
+            result['ministry'] = m.group(1).strip()
+
+        # メタデータを除いた説明文を生成
+        clean_desc = text
+        for pattern in [
+            r'案の公示日[：:]?\s*\d{4}[/\-]\d{1,2}[/\-]\d{1,2}\s*',
+            r'受付締切日時[：:]?\s*\d{4}[/\-]\d{1,2}[/\-]\d{1,2}\s*\d{1,2}:\d{2}\s*',
+            r'カテゴリー[：:]?\s*\S+\s*',
+            r'問合せ先[（(]所管省庁[・･]部局名等[)）][：:]?\s*.+?(?:電話[：:]?\s*[\d\-]+\s*)',
+            r'電話[：:]?\s*[\d\-]+\s*',
+        ]:
+            clean_desc = re.sub(pattern, '', clean_desc)
+        clean_desc = clean_desc.strip()
+        result['cleanDescription'] = clean_desc if clean_desc else ''
+
+        return result
+
     def fetch_egov_pubcom_rss(self) -> List[Dict]:
         """e-Gov パブリックコメント（労働カテゴリ）"""
         print("\n[e-Gov] パブリックコメントRSS")
         print("-" * 60)
-        
+
         rss_url = "https://public-comment.e-gov.go.jp/rss/pcm_list_0000000046.xml"
         feed = self.parse_feed(rss_url)
-        
+
         revisions = []
         for entry in feed.entries[:50]:
             title = entry.get("title", "")
             link = entry.get("link", "")
             published = entry.get("published", "")
             summary = entry.get("summary", "")
-            
+
             if self.safety_regex.search(title) or self.safety_regex.search(summary):
-                revisions.append({
+                parsed = self.parse_pubcom_description(summary)
+
+                item = {
                     "title": title,
                     "officialUrl": link,
-                    "publishedDate": self.parse_date(published),
+                    "publishedDate": parsed.get('announcementDate', self.parse_date(published)),
                     "source": "e-Govパブコメ",
                     "stage": "public_comment",
-                    "description": self.clean_html(summary)[:300],
-                })
-        
+                    "description": parsed.get('cleanDescription', self.clean_html(summary)[:300]),
+                }
+
+                if parsed.get('announcementDate'):
+                    item['announcementDate'] = parsed['announcementDate']
+                if parsed.get('deadlineDate'):
+                    item['deadlineDate'] = parsed['deadlineDate']
+                if parsed.get('ministry'):
+                    item['ministry'] = parsed['ministry']
+
+                revisions.append(item)
+
         return revisions
     
     def fetch_kanpo_gov(self) -> List[Dict]:
@@ -313,6 +359,49 @@ class CompleteScraper:
             pass
         return datetime.now().strftime('%Y-%m-%d')
     
+    def generate_highlights(self, item: Dict) -> List[str]:
+        """改正内容から要旨（ハイライト）を自動生成"""
+        highlights = []
+        title = item.get('title', '')
+        desc = item.get('description', '')
+        amend = item.get('description', '')
+        source = item.get('source', '')
+
+        if source == 'e-Govパブコメ':
+            if item.get('deadlineDate'):
+                highlights.append(f"意見募集締切: {item['deadlineDate']}")
+            if item.get('ministry'):
+                highlights.append(f"所管: {item['ministry']}")
+            return highlights
+
+        # 改正法令名からキーワードを抽出
+        if '安全衛生法及び作業環境測定法の一部を改正する法律' in amend:
+            highlights.append("労働安全衛生法・作業環境測定法の改正に伴う関係省令の整備")
+        if '有機溶剤中毒予防規則等の一部を改正する省令' in amend:
+            highlights.append("化学物質管理の強化（有機溶剤、特化則等の改正）")
+        if '電離放射線障害防止規則' in amend:
+            highlights.append("放射線障害防止に関する規制の見直し")
+
+        # 施行日情報
+        enf = item.get('enforcementDate', '')
+        if enf:
+            highlights.append(f"施行予定日: {enf}")
+
+        # 厚労省特設ページの場合は説明からハイライトを生成
+        if source == '厚労省特設ページ':
+            highlights = []  # リセット
+            if '化学物質' in title:
+                highlights.append("リスクアセスメント対象物質の大幅拡大")
+                highlights.append("約850物質を追加し合計約2,450物質に")
+            if 'エイジフレンドリー' in title:
+                highlights.append("高年齢労働者への安全配慮措置")
+                highlights.append("転倒防止、墜落防止等の対策強化")
+            if '石綿' in title:
+                highlights.append("建築物の解体・改修時の事前調査義務化")
+                highlights.append("石綿含有建材の調査結果の報告義務")
+
+        return highlights
+
     def collect_all_data(self) -> List[Dict]:
         """すべてのデータソースから収集"""
         print("=" * 60)
@@ -374,7 +463,7 @@ class CompleteScraper:
             }
             
             # 日付情報
-            for date_field in ['publishedDate', 'promulgationDate', 'enforcementDate']:
+            for date_field in ['publishedDate', 'originalPromulgationDate', 'enforcementDate']:
                 date_value = item.get(date_field)
                 if date_value and date_value != "":
                     if len(str(date_value)) == 8 and str(date_value).isdigit():
@@ -386,6 +475,16 @@ class CompleteScraper:
                 revision['lawId'] = item['lawId']
             if item.get('lawNo'):
                 revision['lawNo'] = item['lawNo']
+
+            # パブコメ追加フィールド
+            for extra_field in ['announcementDate', 'deadlineDate', 'ministry']:
+                if item.get(extra_field):
+                    revision[extra_field] = item[extra_field]
+
+            # 要旨（ハイライト）を自動生成
+            highlights = self.generate_highlights(item)
+            if highlights:
+                revision['highlights'] = highlights
             
             revisions.append(revision)
         
