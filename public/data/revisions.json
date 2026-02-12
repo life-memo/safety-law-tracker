@@ -429,5 +429,309 @@
       "建築物の解体・改修時の事前調査義務化",
       "石綿含有建材の調査結果の報告義務"
     ]
+  },
+  {
+    "id": 33,
+    "lawName": "労働安全衛生法及び作業環境測定法",
+    "title": "労働安全衛生法及び作業環境測定法の一部を改正する法律（令和7年法律第33号）",
+    "stage": "enforced",
+    "publishedDate": "2025-05-14",
+    "description": "個人事業者等への安全衛生対策、ストレスチェック義務化拡大、化学物質管理強化、機械等の安全対策、高年齢労働者対策を含む大規模改正。2026年1月～段階施行",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/an-eihou/index_00001.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "改正の5本柱: 個人事業者、メンタルヘルス、化学物質、機械、高齢者",
+      "2026年1月1日から段階的に施行開始",
+      "令和7年5月14日公布"
+    ]
+  },
+  {
+    "id": 34,
+    "lawName": "労働安全衛生法",
+    "title": "個人事業者等に対する安全衛生対策の推進（第1段階）",
+    "stage": "enforced",
+    "enforcementDate": "2026-01-01",
+    "publishedDate": "2025-05-14",
+    "description": "注文者の配慮義務拡大に続き、個人事業者等に対する安全衛生措置を事業者に義務付ける改正規定が施行",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/anzeneisei03_00004.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "個人事業者・一人親方等への安全衛生措置の義務化",
+      "建設アスベスト最高裁判決（令和3年）を踏まえた法整備"
+    ]
+  },
+  {
+    "id": 35,
+    "lawName": "労働安全衛生法",
+    "title": "特定自主検査・技能講習の不正防止対策の強化",
+    "stage": "enforced",
+    "enforcementDate": "2026-01-01",
+    "publishedDate": "2025-05-14",
+    "description": "登録機関や検査業者に対する不正防止・欠格要件の強化、フォークリフト技能講習の不正修了証発行禁止",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/an-eihou/index_00001.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "登録検査機関の欠格要件強化",
+      "フォークリフト技能講習の不正修了証発行禁止"
+    ]
+  },
+  {
+    "id": 36,
+    "lawName": "労働安全衛生規則",
+    "title": "がん原性物質に関する記録の労基署提出義務化",
+    "stage": "enforced",
+    "enforcementDate": "2026-01-01",
+    "publishedDate": "2025-05-14",
+    "description": "事業廃止時にがん原性物質に関する対象記録を所轄労働基準監督署長へ提出することが義務化",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000099121_00005.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "事業廃止時のがん原性物質記録の保存・提出義務",
+      "労働者の長期的な健康管理の確保"
+    ]
+  },
+  {
+    "id": 37,
+    "lawName": "石綿障害予防規則",
+    "title": "工作物の解体等における石綿事前調査要件の拡大",
+    "stage": "enforced",
+    "enforcementDate": "2026-01-01",
+    "publishedDate": "2025-05-14",
+    "description": "建築物だけでなく工作物を解体等する場合にも事前調査を行う者の要件が定められた",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/gyousei/anzen/sekimen/index.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "工作物の解体時も石綿事前調査が必要に",
+      "調査者の資格要件を明確化"
+    ]
+  },
+  {
+    "id": 38,
+    "lawName": "労働安全衛生法",
+    "title": "個人事業者等への保護拡大（元方事業者の措置対象拡大）",
+    "stage": "enforcement_scheduled",
+    "enforcementDate": "2026-04-01",
+    "publishedDate": "2025-05-14",
+    "description": "混在作業場所で元方事業者が講ずべき指導・連絡調整等の対象が「労働者」から「作業従事者（個人事業者等を含む）」に拡大",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/anzeneisei03_00004.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "フリーランス・一人親方も保護対象に",
+      "元方事業者の安全衛生措置の対象拡大",
+      "混在作業場所での連絡調整義務の強化"
+    ]
+  },
+  {
+    "id": 39,
+    "lawName": "労働安全衛生法",
+    "title": "化学物質の営業秘密に関する代替名称制度の新設",
+    "stage": "enforcement_scheduled",
+    "enforcementDate": "2026-04-01",
+    "publishedDate": "2025-05-14",
+    "description": "企業秘密に該当する化学物質の成分名について、有害性が低い場合に限り代替名称を届出・記載可能に",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000099121_00005.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "営業秘密に該当する化学物質の代替名称使用が可能に",
+      "有害性が低い場合に限定"
+    ]
+  },
+  {
+    "id": 40,
+    "lawName": "労働安全衛生法",
+    "title": "機械等の検査制度改革（民間登録機関への委託拡大）",
+    "stage": "enforcement_scheduled",
+    "enforcementDate": "2026-04-01",
+    "publishedDate": "2025-05-14",
+    "description": "ボイラーやクレーン等の特定機械の一部検査について、民間の登録機関による実施が可能に",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/an-eihou/index_00001.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "ボイラー・クレーン等の検査を民間機関に委託可能に",
+      "検査制度の効率化・迅速化"
+    ]
+  },
+  {
+    "id": 41,
+    "lawName": "労働安全衛生法",
+    "title": "高年齢労働者の労働災害防止対策の努力義務化",
+    "stage": "enforcement_scheduled",
+    "enforcementDate": "2026-04-01",
+    "publishedDate": "2025-05-14",
+    "description": "高年齢労働者の特性に配慮した作業環境改善・作業管理等の必要な措置を事業者の努力義務に",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/newpage_00007.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "高年齢労働者への作業環境改善が努力義務化",
+      "転倒防止、身体機能低下への配慮"
+    ]
+  },
+  {
+    "id": 42,
+    "lawName": "労働安全衛生法",
+    "title": "治療と仕事の両立支援の努力義務化",
+    "stage": "enforcement_scheduled",
+    "enforcementDate": "2026-04-01",
+    "publishedDate": "2025-05-14",
+    "description": "がん・脳卒中等の疾病を抱える労働者への治療と仕事の両立支援推進が事業者の努力義務に",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/an-eihou/index_00001.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "疾病を抱える労働者への両立支援が努力義務に",
+      "がん・脳卒中等の治療との両立"
+    ]
+  },
+  {
+    "id": 43,
+    "lawName": "労働安全衛生規則",
+    "title": "新規化学物質届出の電子申請義務化",
+    "stage": "enforcement_scheduled",
+    "enforcementDate": "2026-07-01",
+    "publishedDate": "2025-05-14",
+    "description": "新規化学物質の名称・有害性の調査結果の届出、少量新規化学物質の製造・輸入に係る確認申請等の電子申請が原則義務化",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000099121_00005.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "新規化学物質の届出が電子申請に原則義務化",
+      "書面提出は「著しく困難な場合」のみ認められる"
+    ]
+  },
+  {
+    "id": 44,
+    "lawName": "作業環境測定法",
+    "title": "個人ばく露測定の法的位置づけ（作業環境測定に統合）",
+    "stage": "enforcement_scheduled",
+    "enforcementDate": "2026-10-01",
+    "publishedDate": "2025-05-14",
+    "description": "個人ばく露測定が作業環境測定の一つとして法的に位置付けられ、有害物質取扱い作業場で資格者による測定が義務化",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/an-eihou/index_00001.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "個人ばく露測定が作業環境測定に法的位置づけ",
+      "資格を有する者による測定が義務化"
+    ]
+  },
+  {
+    "id": 45,
+    "lawName": "労働安全衛生法",
+    "title": "50人未満事業場へのストレスチェック義務化の拡大",
+    "stage": "promulgated",
+    "publishedDate": "2025-05-14",
+    "description": "現在努力義務の50人未満事業場でのストレスチェック・高ストレス者面接指導が義務化（公布後3年以内に施行）",
+    "officialUrl": "https://www.mhlw.go.jp/bunya/roudoukijun/anzeneisei12/index.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "全事業場でストレスチェックが義務化",
+      "50人未満事業場の負担に配慮し施行まで準備期間確保",
+      "公布後3年以内（最長2028年）に施行"
+    ]
+  },
+  {
+    "id": 46,
+    "lawName": "労働安全衛生法",
+    "title": "個人事業者等の業務上災害の報告制度の創設",
+    "stage": "enforcement_scheduled",
+    "enforcementDate": "2027-01-01",
+    "publishedDate": "2025-05-14",
+    "description": "個人事業者等の業務上の災害について報告制度を新設。災害の実態把握と再発防止を目的",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/anzeneisei03_00004.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "個人事業者の業務上災害の報告義務を新設",
+      "2027年1月1日施行"
+    ]
+  },
+  {
+    "id": 47,
+    "lawName": "労働安全衛生法",
+    "title": "個人事業者等自身の安全衛生教育受講義務等",
+    "stage": "enforcement_scheduled",
+    "enforcementDate": "2027-04-01",
+    "publishedDate": "2025-05-14",
+    "description": "個人事業者自身にも安全装置のない機械使用禁止や危険・有害業務の安全衛生教育受講が義務化",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/anzeneisei03_00004.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "個人事業者にも安全衛生教育の受講義務",
+      "安全装置なし機械の使用禁止",
+      "2027年4月1日施行"
+    ]
+  },
+  {
+    "id": 48,
+    "lawName": "労働安全衛生法",
+    "title": "SDS通知義務違反への罰則の新設",
+    "stage": "promulgated",
+    "publishedDate": "2025-05-14",
+    "description": "化学物質の譲渡・提供時のSDS（安全データシート）通知義務違反に対する罰則が新設（公布後5年以内施行）",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000099121_00005.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "SDS通知義務違反に罰則を新設",
+      "公布後5年以内（最長2030年）に施行"
+    ]
+  },
+  {
+    "id": 49,
+    "lawName": "労働安全衛生法",
+    "title": "注文者の配慮義務の拡大（全業種への適用）",
+    "stage": "enforced",
+    "enforcementDate": "2025-05-14",
+    "publishedDate": "2025-05-14",
+    "description": "建設業に限らず全業種で、業務を委託する注文者は安全な作業を妨げる無理な工期・納期を設定しないよう配慮する義務を負う",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/anzeneisei03_00004.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "注文者の配慮義務が全業種に拡大",
+      "無理な工期・納期設定の禁止（公布日施行）"
+    ]
+  },
+  {
+    "id": 50,
+    "lawName": "労働安全衛生規則",
+    "title": "労働安全衛生規則の一部改正（熱中症対策の強化）",
+    "stage": "enforced",
+    "publishedDate": "2025-05-20",
+    "enforcementDate": "2025-06-01",
+    "description": "WBGT値に基づく熱中症予防措置の義務化。健康障害の疑いがある者の早期発見・重篤化防止を事業者に義務付け",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/index.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "WBGT値に基づく熱中症予防措置の義務化",
+      "熱中症の疑いがある者の早期発見・対応の義務化"
+    ]
+  },
+  {
+    "id": 51,
+    "lawName": "労働安全衛生法",
+    "title": "化学物質管理の自律的管理への転換",
+    "stage": "enforced",
+    "description": "国が定めた有機則・特化則等の「法令遵守型」から、事業者主導の「リスクアセスメントによる自律的管理」へ転換",
+    "officialUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000099121_00005.html",
+    "source": "厚労省",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "法令遵守型からリスクアセスメント型へ管理方針を転換",
+      "化学物質管理者の選任義務",
+      "ばく露濃度の基準値超過時の措置義務"
+    ]
   }
 ]
