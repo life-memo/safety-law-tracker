@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, ExternalLink, FileText, MessageSquare, CheckCircle, Clock, AlertCircle, Bell, HelpCircle } from 'lucide-react';
+import LawTracker from './LawTracker';
 
 // 法令データ
 const lawCategories = {
@@ -447,6 +448,11 @@ function SafetyLawTracker() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* 法改正トラッカー（通知なし） */}
+        <div className="mt-8 bg-white rounded-xl shadow-md p-6">
+          <LawTracker />
         </div>
       </div>
     </div>
