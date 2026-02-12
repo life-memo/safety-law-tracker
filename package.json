@@ -2,7 +2,7 @@
   "name": "safety-law-tracker",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://life-memo.github.io/safety-law-tracker",
+  "homepage": ".",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
