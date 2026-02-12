@@ -383,6 +383,23 @@ function SafetyLawTracker() {
                       {showLawName && <p className="text-sm text-gray-600 mb-2">{revision.lawName}</p>}
                       <p className="text-gray-700">{revision.description}</p>
 
+                      {/* 施行日・公布日を常に表示 */}
+                      <div className="flex flex-wrap items-center gap-4 mt-2">
+                        {revision.enforcementDate && (
+                          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-purple-50 border border-purple-200 rounded-lg">
+                            <Clock size={14} className="text-purple-500" />
+                            <span className="text-sm font-medium text-purple-700">施行日:</span>
+                            <span className="text-sm font-bold text-purple-900">{formatDate(revision.enforcementDate)}</span>
+                          </div>
+                        )}
+                        {revision.publishedDate && (
+                          <div className="inline-flex items-center gap-1.5 text-sm text-gray-500">
+                            <CheckCircle size={14} className="text-gray-400" />
+                            <span>公布日: {formatDate(revision.publishedDate)}</span>
+                          </div>
+                        )}
+                      </div>
+
                       {revision.stage === "public_comment" && revision.deadlineDate && (
                         <div className="mt-2 inline-flex items-center gap-2 px-3 py-1 bg-red-50 border border-red-200 rounded-lg">
                           <AlertCircle size={14} className="text-red-500" />
@@ -392,65 +409,38 @@ function SafetyLawTracker() {
                         </div>
                       )}
 
-                      {revision.highlights && revision.highlights.length > 0 && (
-                        <div className="mt-3 bg-blue-50 rounded-lg p-3">
-                          <p className="text-sm font-bold text-blue-900 mb-1">主なポイント：</p>
-                          <ul className="text-sm text-blue-800 space-y-1">
-                            {revision.highlights.map((highlight, idx) => (
-                              <li key={idx}>• {highlight}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
+                      {revision.highlights && revision.highlights.length > 0 && (() => {
+                        const filtered = revision.highlights.filter(h =>
+                          !h.startsWith("施行予定日:") && !h.startsWith("意見募集締切:") && !h.startsWith("所管:")
+                        );
+                        return filtered.length > 0 ? (
+                          <div className="mt-3 bg-blue-50 rounded-lg p-3">
+                            <p className="text-sm font-bold text-blue-900 mb-1">主なポイント：</p>
+                            <ul className="text-sm text-blue-800 space-y-1">
+                              {filtered.map((highlight, idx) => (
+                                <li key={idx}>• {highlight}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        ) : null;
+                      })()}
                     </div>
                   </div>
 
                   {isExpanded && (
                     <div className="mt-4 pt-4 border-t border-gray-200">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        {revision.stage === "public_comment" ? (
-                          <>
-                            {revision.announcementDate && (
-                              <div className="flex items-center gap-2 text-sm">
-                                <CheckCircle size={16} className="text-blue-500" />
-                                <span className="font-medium">公示日:</span>
-                                <span>{formatDate(revision.announcementDate)}</span>
-                              </div>
-                            )}
-                            {revision.deadlineDate && (
-                              <div className="flex items-center gap-2 text-sm">
-                                <AlertCircle size={16} className="text-red-500" />
-                                <span className="font-medium">意見募集締切:</span>
-                                <span className="font-bold text-red-600">{formatDate(revision.deadlineDate)}</span>
-                              </div>
-                            )}
-                            {revision.ministry && (
-                              <div className="flex items-center gap-2 text-sm col-span-full">
-                                <FileText size={16} className="text-gray-500" />
-                                <span className="font-medium">所管:</span>
-                                <span>{revision.ministry}</span>
-                              </div>
-                            )}
-                          </>
-                        ) : (
-                          <>
-                            {revision.publishedDate && (
-                              <div className="flex items-center gap-2 text-sm">
-                                <CheckCircle size={16} className="text-green-500" />
-                                <span className="font-medium">改正公布日:</span>
-                                <span>{formatDate(revision.publishedDate)}</span>
-                              </div>
-                            )}
-                            {revision.enforcementDate && (
-                              <div className="flex items-center gap-2 text-sm">
-                                <Clock size={16} className="text-purple-500" />
-                                <span className="font-medium">施行日:</span>
-                                <span className="font-bold">{formatDate(revision.enforcementDate)}</span>
-                              </div>
-                            )}
-                          </>
-                        )}
-                      </div>
+                      {revision.stage === "public_comment" && revision.ministry && (
+                        <div className="flex items-center gap-2 text-sm mb-4">
+                          <FileText size={16} className="text-gray-500" />
+                          <span className="font-medium">所管:</span>
+                          <span>{revision.ministry}</span>
+                        </div>
+                      )}
+                      {revision.lawNo && (
+                        <div className="text-sm text-gray-500 mb-4">
+                          法令番号: {revision.lawNo}
+                        </div>
+                      )}
                       <a
                         href={revision.officialUrl}
                         target="_blank"
@@ -459,7 +449,7 @@ function SafetyLawTracker() {
                         onClick={(e) => e.stopPropagation()}
                       >
                         <FileText size={16} />
-                        {revision.stage === "public_comment" ? "意見募集ページ (e-Gov)" : "公式ページ"}
+                        {revision.stage === "public_comment" ? "意見募集ページ (e-Gov)" : "e-Gov法令ページ"}
                         <ExternalLink size={14} />
                       </a>
                     </div>

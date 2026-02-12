@@ -161,41 +161,62 @@ class CompleteScraper:
         return result
 
     def fetch_egov_pubcom_rss(self) -> List[Dict]:
-        """e-Gov パブリックコメント（労働カテゴリ）"""
+        """e-Gov パブリックコメント（複数カテゴリ対応）"""
         print("\n[e-Gov] パブリックコメントRSS")
         print("-" * 60)
 
-        rss_url = "https://public-comment.e-gov.go.jp/rss/pcm_list_0000000046.xml"
-        feed = self.parse_feed(rss_url)
+        # 複数のRSSカテゴリを検索（厚生労働省関連）
+        rss_urls = [
+            "https://public-comment.e-gov.go.jp/rss/pcm_list_0000000046.xml",  # 厚生労働省
+            "https://public-comment.e-gov.go.jp/rss/pcm_list_0000000047.xml",
+            "https://public-comment.e-gov.go.jp/rss/pcm_list_0000000048.xml",
+            "https://public-comment.e-gov.go.jp/rss/pcm_list.xml",            # 全省庁
+        ]
 
         revisions = []
-        for entry in feed.entries[:50]:
-            title = entry.get("title", "")
-            link = entry.get("link", "")
-            published = entry.get("published", "")
-            summary = entry.get("summary", "")
+        seen_links = set()
 
-            if self.safety_regex.search(title) or self.safety_regex.search(summary):
-                parsed = self.parse_pubcom_description(summary)
+        for rss_url in rss_urls:
+            print(f"  RSS取得中: {rss_url}")
+            feed = self.parse_feed(rss_url)
+            if not hasattr(feed, 'entries'):
+                continue
 
-                item = {
-                    "title": title,
-                    "officialUrl": link,
-                    "publishedDate": parsed.get('announcementDate', self.parse_date(published)),
-                    "source": "e-Govパブコメ",
-                    "stage": "public_comment",
-                    "description": parsed.get('cleanDescription', self.clean_html(summary)[:300]),
-                }
+            for entry in feed.entries[:100]:
+                title = entry.get("title", "")
+                link = entry.get("link", "")
+                published = entry.get("published", "")
+                summary = entry.get("summary", "")
 
-                if parsed.get('announcementDate'):
-                    item['announcementDate'] = parsed['announcementDate']
-                if parsed.get('deadlineDate'):
-                    item['deadlineDate'] = parsed['deadlineDate']
-                if parsed.get('ministry'):
-                    item['ministry'] = parsed['ministry']
+                # 重複排除
+                if link in seen_links:
+                    continue
 
-                revisions.append(item)
+                if self.safety_regex.search(title) or self.safety_regex.search(summary):
+                    seen_links.add(link)
+                    parsed = self.parse_pubcom_description(summary)
 
+                    item = {
+                        "title": title,
+                        "officialUrl": link,
+                        "publishedDate": parsed.get('announcementDate', self.parse_date(published)),
+                        "source": "e-Govパブコメ",
+                        "stage": "public_comment",
+                        "description": parsed.get('cleanDescription', self.clean_html(summary)[:300]),
+                    }
+
+                    if parsed.get('announcementDate'):
+                        item['announcementDate'] = parsed['announcementDate']
+                    if parsed.get('deadlineDate'):
+                        item['deadlineDate'] = parsed['deadlineDate']
+                    if parsed.get('ministry'):
+                        item['ministry'] = parsed['ministry']
+
+                    revisions.append(item)
+
+            time.sleep(1)
+
+        print(f"  パブコメ合計: {len(revisions)}件")
         return revisions
     
     def fetch_kanpo_gov(self) -> List[Dict]:
@@ -368,24 +389,47 @@ class CompleteScraper:
         source = item.get('source', '')
 
         if source == 'e-Govパブコメ':
-            if item.get('deadlineDate'):
-                highlights.append(f"意見募集締切: {item['deadlineDate']}")
-            if item.get('ministry'):
-                highlights.append(f"所管: {item['ministry']}")
+            # パブコメはタイトルから改正内容を推測
+            if '施行令' in title:
+                highlights.append("労働安全衛生法施行令の改正")
+            if '規則' in title and '施行令' not in title:
+                highlights.append("労働安全衛生規則の改正")
+            if '化学物質' in title or '化学物質' in desc:
+                highlights.append("化学物質対策関連の改正")
+            if 'クレーン' in title:
+                highlights.append("クレーン等安全規則の改正")
             return highlights
 
-        # 改正法令名からキーワードを抽出
+        # 改正法令名からキーワードを抽出して具体的なポイントを生成
         if '安全衛生法及び作業環境測定法の一部を改正する法律' in amend:
             highlights.append("労働安全衛生法・作業環境測定法の改正に伴う関係省令の整備")
         if '有機溶剤中毒予防規則等の一部を改正する省令' in amend:
             highlights.append("化学物質管理の強化（有機溶剤、特化則等の改正）")
-        if '電離放射線障害防止規則' in amend:
+        if '電離放射線障害防止規則' in amend or '電離放射線' in title:
             highlights.append("放射線障害防止に関する規制の見直し")
+            highlights.append("被ばく管理・測定に関する規定の改正")
 
-        # 施行日情報
-        enf = item.get('enforcementDate', '')
-        if enf:
-            highlights.append(f"施行予定日: {enf}")
+        # 法令名から具体的な改定ポイントを追加
+        law_name = item.get('lawName', '')
+        law_specific = {
+            '労働安全衛生規則': '安全衛生に関する基本規則の見直し',
+            '有機溶剤中毒予防規則': '有機溶剤の取扱い基準・管理体制の見直し',
+            '鉛中毒予防規則': '鉛関連業務の管理基準の見直し',
+            '粉じん障害防止規則': '粉じん作業場の管理基準の見直し',
+            '特定化学物質障害予防規則': '特定化学物質の管理基準・測定方法の見直し',
+            '石綿障害予防規則': '石綿（アスベスト）関連規制の強化',
+            '酸素欠乏症等防止規則': '酸素欠乏症防止の測定・管理基準の見直し',
+            'クレーン等安全規則': 'クレーン等の安全基準の見直し',
+            'ボイラー及び圧力容器安全規則': 'ボイラー・圧力容器の検査基準の見直し',
+            '高気圧作業安全衛生規則': '高気圧作業の安全衛生基準の見直し',
+            '四アルキル鉛中毒予防規則': '四アルキル鉛の取扱い規定の見直し',
+            'じん肺法施行規則': 'じん肺健康診断等の規定の見直し',
+            '作業環境測定法施行規則': '作業環境測定の方法・基準の見直し',
+        }
+        for key, detail in law_specific.items():
+            if key in law_name and detail not in highlights:
+                highlights.append(detail)
+                break
 
         # 厚労省特設ページの場合は説明からハイライトを生成
         if source == '厚労省特設ページ':
