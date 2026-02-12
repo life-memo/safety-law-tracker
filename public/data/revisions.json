@@ -362,7 +362,7 @@
     "title": "「労働安全衛生法施行令の一部を改正する政令案」及び「労働安全衛生規則の一部を改正する省令案」に関する御意見の募集について",
     "stage": "public_comment",
     "description": "労働安全衛生法施行令の一部を改正する政令案及び労働安全衛生規則の一部を改正する省令案について意見募集",
-    "officialUrl": "https://public-comment.e-gov.go.jp/servlet/Public?CLASSNAME=PCMMSTDETAIL&id=495250409&Mode=0",
+    "officialUrl": "https://public-comment.e-gov.go.jp/servlet/Public?CLASSNAME=PCMMSTDETAIL&Mode=0&id=495250356",
     "source": "e-Govパブコメ",
     "collectedDate": "2026-02-12",
     "publishedDate": "2026-01-23",
@@ -372,6 +372,19 @@
     "highlights": [
       "労働安全衛生法施行令の改正（化学物質対策関連）",
       "労働安全衛生規則の改正（化学物質対策関連）"
+    ]
+  },
+  {
+    "id": 32,
+    "lawName": "労働安全衛生規則",
+    "title": "労働安全衛生規則の一部を改正する省令案に関する御意見の募集について",
+    "stage": "public_comment",
+    "description": "労働安全衛生規則の一部を改正する省令案について意見募集",
+    "officialUrl": "https://public-comment.e-gov.go.jp/servlet/Public?CLASSNAME=PCMMSTDETAIL&Mode=0&id=495250156",
+    "source": "e-Govパブコメ",
+    "collectedDate": "2026-02-12",
+    "highlights": [
+      "労働安全衛生規則の改正"
     ]
   },
   {
