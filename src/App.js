@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, ExternalLink, Calendar, FileText, MessageSquare, CheckCircle, Clock, AlertCircle, RefreshCw, Download, Bell, HelpCircle } from 'lucide-react';
+import { Search, ExternalLink, FileText, MessageSquare, CheckCircle, Clock, AlertCircle, Bell, HelpCircle } from 'lucide-react';
 
 // 法令データ
 const lawCategories = {
@@ -198,7 +198,7 @@ function SafetyLawTracker() {
   }
 
   const filteredRevisions = revisions.filter(revision => {
-    const matchesSearch = revision.title.includes(searchTerm) || revision.description.includes(searchTerm);
+    const matchesSearch = revision.title.includes(searchTerm) || revision.description.includes(searchTerm) || (revision.lawName && revision.lawName.includes(searchTerm));
     const matchesStage = selectedStage === "all" || revision.stage === selectedStage;
     return matchesSearch && matchesStage;
   });
@@ -350,14 +350,23 @@ function SafetyLawTracker() {
 
         {/* 改正情報リスト */}
         <div className="space-y-4 mb-8">
+          {filteredRevisions.length === 0 && (
+            <div className="bg-white rounded-lg shadow p-8 text-center">
+              <AlertCircle size={40} className="mx-auto mb-3 text-gray-400" />
+              <p className="text-gray-600 font-medium">該当する改正情報が見つかりません</p>
+              <p className="text-sm text-gray-400 mt-1">検索条件やフィルターを変更してみてください</p>
+            </div>
+          )}
           {filteredRevisions.map(revision => {
             const stageInfo = getStageInfo(revision.stage);
+            if (!stageInfo) return null;
             const StageIcon = stageInfo.icon;
             const isExpanded = expandedRevision === revision.id;
+            const showLawName = revision.lawName && revision.lawName !== revision.title;
 
             return (
               <div key={revision.id} className="bg-white rounded-lg shadow hover:shadow-lg transition">
-                <div 
+                <div
                   className="p-6 cursor-pointer"
                   onClick={() => setExpandedRevision(isExpanded ? null : revision.id)}
                 >
@@ -370,7 +379,7 @@ function SafetyLawTracker() {
                         </span>
                       </div>
                       <h3 className="text-lg font-bold text-gray-800 mb-1">{revision.title}</h3>
-                      <p className="text-sm text-gray-600 mb-2">{revision.lawName}</p>
+                      {showLawName && <p className="text-sm text-gray-600 mb-2">{revision.lawName}</p>}
                       <p className="text-gray-700">{revision.description}</p>
                       
                       {revision.highlights && revision.highlights.length > 0 && (
