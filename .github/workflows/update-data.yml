@@ -2,56 +2,64 @@ name: Update Law Data
 
 on:
   schedule:
-    - cron: '0 23 * * *'  # 毎日午前8時（JST）
+    - cron: '0 23 * * *'  # 毎日午前8時（JST）- 日次増分更新
   workflow_dispatch:
+    inputs:
+      lookback_days:
+        description: 'e-Gov APIの遡り日数（デフォルト30日）'
+        required: false
+        default: '30'
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-    
-    - uses: actions/setup-python@v4
+
+    - uses: actions/setup-python@v5
       with:
-        python-version: '3.10'
-    
+        python-version: '3.11'
+
     - name: Install dependencies
       run: pip install beautifulsoup4 requests lxml feedparser
-    
+
     - name: Create data directory
       run: mkdir -p public/data
-    
-    - name: Run scraper
+
+    - name: Run scraper (merge mode)
       run: |
         python scraper.py
-        if [ -f "revisions_list.json" ]; then
-          mv revisions_list.json public/data/revisions.json
-          echo "✅ データ収集成功"
+        echo "Scraper completed"
+
+    - name: Verify output
+      run: |
+        if [ -f "public/data/revisions.json" ]; then
+          ITEM_COUNT=$(python3 -c "import json; data=json.load(open('public/data/revisions.json')); print(len(data))")
+          echo "revisions.json: ${ITEM_COUNT} items"
         else
-          echo "❌ エラー"
+          echo "ERROR: revisions.json not found"
           exit 1
         fi
-    
+
     - name: Commit changes
       run: |
         git config user.name 'github-actions[bot]'
         git config user.email 'github-actions[bot]@users.noreply.github.com'
-        
-        # .gitignoreを一時的に無効化してファイルを追加
+
         git add -f public/data/revisions.json
-        
-        # 変更があるか確認
+
         if git diff --staged --quiet; then
-          echo "ℹ️ データに変更はありませんでした"
+          echo "No changes detected"
         else
-          git commit -m "🤖 自動更新: $(date +'%Y-%m-%d')"
+          ITEM_COUNT=$(python3 -c "import json; data=json.load(open('public/data/revisions.json')); print(len(data))")
+          git commit -m "bot: daily update (${ITEM_COUNT} items) $(date +'%Y-%m-%d')"
           git push
-          echo "✅ データを更新しました"
+          echo "Data updated"
         fi
-    
+
     - uses: actions/upload-artifact@v4
       if: always()
       with:
