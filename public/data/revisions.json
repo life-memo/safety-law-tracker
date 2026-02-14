@@ -1886,5 +1886,58 @@
     "officialUrl": "https://www.mhlw.go.jp/content/001310141.pdf",
     "source": "厚労省",
     "collectedDate": "2026-02-13"
+  },
+  {
+    "id": 177,
+    "lawName": "船員労働安全衛生規則",
+    "title": "船員労働安全衛生規則",
+    "stage": "enforced",
+    "description": "改正法令: 船員法等の一部を改正する法律の一部の施行に伴う国土交通省関係省令の整備等に関する省令",
+    "officialUrl": "https://elaws.e-gov.go.jp/document?lawid=339M50000800053",
+    "source": "e-Gov法令API v2",
+    "collectedDate": "2026-02-14",
+    "publishedDate": "2026-02-14",
+    "originalPromulgationDate": "1964-07-31",
+    "enforcementDate": "2026-02-14",
+    "lawId": "339M50000800053",
+    "lawNo": "昭和三十九年運輸省令第五十三号",
+    "highlights": [
+      "安全衛生に関する基本規則の見直し",
+      "施行予定日: 2026-02-14"
+    ]
+  },
+  {
+    "id": 178,
+    "lawName": "労働安全衛生関連法令",
+    "title": "労働安全衛生規則等の一部を改正する省令案及び労働安全衛生規則第四十四条第二項の規定に基づき厚生労働大臣が定める基準等の一部を改正する告示案に関する御意見の募集について",
+    "stage": "public_comment",
+    "description": "問合せ先（所管省庁・部局名等）：厚生労働省労働基準局労働安全衛生部労働衛生課",
+    "officialUrl": "https://public-comment.e-gov.go.jp/servlet/Public?CLASSNAME=PCMMSTDETAIL&id=495250435&Mode=0",
+    "source": "e-Govパブコメ",
+    "collectedDate": "2026-02-14",
+    "publishedDate": "2026-02-13",
+    "announcementDate": "2026-02-13",
+    "deadlineDate": "2026-03-15",
+    "ministry": "厚生労働省労働基準局労働安全衛生部労働衛生課",
+    "highlights": [
+      "労働安全衛生規則の改正"
+    ]
+  },
+  {
+    "id": 179,
+    "lawName": "労働安全衛生関連法令",
+    "title": "労働安全衛生規則の一部を改正する省令案に関する御意見の募集について",
+    "stage": "public_comment",
+    "description": "問合せ先（所管省庁・部局名等）：厚生労働省労働基準局労働安全衛生部労働衛生課",
+    "officialUrl": "https://public-comment.e-gov.go.jp/servlet/Public?CLASSNAME=PCMMSTDETAIL&id=495250436&Mode=0",
+    "source": "e-Govパブコメ",
+    "collectedDate": "2026-02-14",
+    "publishedDate": "2026-02-13",
+    "announcementDate": "2026-02-13",
+    "deadlineDate": "2026-03-15",
+    "ministry": "厚生労働省労働基準局労働安全衛生部労働衛生課",
+    "highlights": [
+      "労働安全衛生規則の改正"
+    ]
   }
 ]
