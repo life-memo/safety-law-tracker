@@ -1,8 +1,8 @@
 name: Update Law Data
 
 on:
-  schedule:
-    - cron: '0 23 * * *'  # 毎日午前8時（JST）- 日次増分更新
+  # schedule:
+  #   - cron: '0 23 * * *'  # 毎日午前8時（JST）- 日次増分更新
   workflow_dispatch:
     inputs:
       lookback_days:
