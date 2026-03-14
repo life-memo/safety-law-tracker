@@ -2170,5 +2170,15 @@
     "highlights": [
       "化学物質対策関連の改正"
     ]
+  },
+  {
+    "id": 195,
+    "lawName": "労働安全衛生関連法令",
+    "title": "皮膚障害等防止用保護具の選定マニュアル（第３版 令和８年３月）［11.0MB］",
+    "stage": "enforced",
+    "description": "厚労省通知・通達: 皮膚障害等防止用保護具の選定マニュアル（第３版 令和８年３月）［11.0MB］",
+    "officialUrl": "https://www.mhlw.go.jp/content/11300000/001670143.pdf",
+    "source": "厚労省通知",
+    "collectedDate": "2026-03-14"
   }
 ]
