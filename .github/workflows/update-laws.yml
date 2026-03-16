@@ -32,6 +32,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add public/data/items.json public/data/cache/last-fetch.json
+          git add -f public/data/items.json public/data/cache/last-fetch.json
           git diff --quiet && git diff --staged --quiet || git commit -m "chore: update law items [skip ci]"
           git push
