@@ -42,39 +42,43 @@ const lawCategories = {
 const revisionStages = [
   {
     id: "watching",
-    name: "動向把握",
+    name: "審議・検討中",
     icon: FileText,
     bgClass: "bg-gray-100",
     textClass: "text-gray-600",
     borderColor: "#6b7280",
-    description: "審議会・研究会で議論中。気配を察知する段階"
+    description: "審議会・研究会で改正の方向性を議論している段階",
+    sources: "厚労省 審議会・検討会ページ / 職場のあんぜんサイト"
   },
   {
     id: "prepare",
-    name: "準備開始",
+    name: "意見公募中",
     icon: MessageSquare,
     bgClass: "bg-blue-100",
     textClass: "text-blue-600",
     borderColor: "#3b82f6",
-    description: "パブコメ公示。内容ほぼ確定。社内への一報タイミング"
+    description: "改正案が作成され、パブリックコメントを募集している段階",
+    sources: "e-Gov パブリックコメント"
   },
   {
     id: "implementing",
-    name: "対応準備中",
+    name: "公布済",
     icon: AlertCircle,
     bgClass: "bg-yellow-100",
     textClass: "text-yellow-600",
     borderColor: "#eab308",
-    description: "公布〜省令・通達整備中。規程改定・研修設計を進める段階"
+    description: "官報に掲載され、施行日までの周知・準備期間",
+    sources: "e-Gov 法令API / 官報RSS"
   },
   {
     id: "enforced",
-    name: "施行済み",
+    name: "施行済",
     icon: CheckCircle,
     bgClass: "bg-green-100",
     textClass: "text-green-600",
     borderColor: "#22c55e",
-    description: "法的効力あり。遵守・運用フェーズ"
+    description: "法的効力が発生し、遵守義務がある状態",
+    sources: "e-Gov 法令API / 厚労省 通知・通達ページ"
   }
 ];
 
@@ -305,8 +309,8 @@ function SafetyLawTracker() {
 
           {showProcessDetails && (
             <div className="bg-blue-50 rounded-lg p-4 border border-blue-200 mt-4">
-              <h3 className="font-bold text-blue-900 mb-3">各プロセスの説明</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <h3 className="font-bold text-blue-900 mb-3">法令改正の流れ</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {revisionStages.map(stage => {
                   const Icon = stage.icon;
                   return (
@@ -315,7 +319,10 @@ function SafetyLawTracker() {
                         <Icon size={16} className={stage.textClass} />
                         <span className="font-bold text-sm text-gray-800">{stage.name}</span>
                       </div>
-                      <p className="text-xs text-gray-600">{stage.description}</p>
+                      <p className="text-xs text-gray-600 mb-2">{stage.description}</p>
+                      <div className="text-xs text-blue-700 bg-blue-50 rounded px-2 py-1">
+                        <span className="font-medium">データソース: </span>{stage.sources}
+                      </div>
                     </div>
                   );
                 })}
