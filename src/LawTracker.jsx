@@ -65,12 +65,10 @@ export default function LawTracker() {
           style={{ padding: 10, minWidth: 260, flex: "1 1 260px" }}
         />
         <select value={process} onChange={(e) => setProcess(e.target.value)} style={{ padding: 10 }}>
-          <option value="all">process: 全部</option>
-          <option value="policy">検討段階</option>
-          <option value="public_comment">パブコメ</option>
-          <option value="diet">国会審議中</option>
-          <option value="promulgated">公布済み</option>
-          <option value="enforcement_planned">施行予定</option>
+          <option value="all">ステージ: すべて</option>
+          <option value="watching">動向把握</option>
+          <option value="prepare">準備開始</option>
+          <option value="implementing">対応準備中</option>
           <option value="enforced">施行済み</option>
         </select>
         <select value={action} onChange={(e) => setAction(e.target.value)} style={{ padding: 10 }}>

@@ -198,13 +198,14 @@ class CompleteScraper:
                     enf_date = f"{enforcement[:4]}-{enforcement[4:6]}-{enforcement[6:]}" if len(enforcement) == 8 else ""
 
                     # 施行状態を判定
-                    stage = "promulgated"
-                    if enforcement:
+                    if not enforcement:
+                        stage = "implementing"
+                    else:
                         try:
                             enf_datetime = datetime.strptime(enforcement, "%Y%m%d")
-                            stage = "enforced" if enf_datetime < datetime.now() else "enforcement_scheduled"
+                            stage = "enforced" if enf_datetime < datetime.now() else "implementing"
                         except:
-                            stage = "enforcement_scheduled"
+                            stage = "implementing"
 
                     # 法令詳細URL（Version 2対応）
                     detail_url = f"https://elaws.e-gov.go.jp/document?lawid={law_id}" if law_id else "https://laws.e-gov.go.jp/"
@@ -307,7 +308,7 @@ class CompleteScraper:
                         "officialUrl": link,
                         "publishedDate": parsed.get('announcementDate', self.parse_date(published)),
                         "source": "e-Govパブコメ",
-                        "stage": "public_comment",
+                        "stage": "prepare",
                         "description": parsed.get('cleanDescription', self.clean_html(summary)[:300]),
                     }
 
@@ -369,7 +370,7 @@ class CompleteScraper:
                         "officialUrl": link,
                         "publishedDate": self.parse_date(published),
                         "source": "官報（非公式RSS）",
-                        "stage": "promulgated",
+                        "stage": "implementing",
                         "description": self.clean_html(description)[:300],
                     })
 
@@ -424,7 +425,7 @@ class CompleteScraper:
                         "title": title,
                         "officialUrl": link or url,
                         "source": "職場のあんぜんサイト",
-                        "stage": "consideration",
+                        "stage": "watching",
                         "description": text[:300],
                     })
 
@@ -450,7 +451,7 @@ class CompleteScraper:
             {
                 "title": "化学物質規制の見直し（第2段階・約850物質追加）",
                 "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000099121_00005.html",
-                "stage": "enforcement_scheduled",
+                "stage": "implementing",
                 "description": "2026年4月から約850物質を追加し、合計約2,450物質に対してリスクアセスメント義務化",
                 "enforcementDate": "2026-04-01",
             },
@@ -591,7 +592,7 @@ class CompleteScraper:
                                 "title": text[:200],
                                 "officialUrl": full_url,
                                 "source": "審議会・検討会",
-                                "stage": "under_review",
+                                "stage": "watching",
                                 "description": f"{page_title}: {text[:300]}",
                             })
 
@@ -818,7 +819,7 @@ class CompleteScraper:
                 'id': next_id,
                 'lawName': item.get('lawName', '労働安全衛生関連法令'),
                 'title': title,
-                'stage': item.get('stage', 'consideration'),
+                'stage': item.get('stage', 'watching'),
                 'description': item.get('description', '')[:300],
                 'officialUrl': url,
                 'source': item.get('source', ''),
@@ -865,13 +866,10 @@ class CompleteScraper:
 
         print("\nステージ別件数:")
         stage_names = {
-            'consideration': '検討段階',
-            'under_review': '検討段階',
-            'public_comment': 'パブリックコメント',
-            'deliberation': '国会審議中',
-            'promulgated': '公布済み',
-            'enforcement_scheduled': '施行予定',
-            'enforced': '施行済み'
+            'watching': '動向把握',
+            'prepare': '準備開始',
+            'implementing': '対応準備中',
+            'enforced': '施行済み',
         }
         for stage, count in sorted(stage_counts.items()):
             print(f"  {stage_names.get(stage, stage)}: {count}件")

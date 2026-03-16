@@ -160,7 +160,7 @@ def map_to_item(entry: Dict[str, Any]) -> Dict[str, Any]:
         "title": title,
         "law_family": "労働安全衛生関連法令",
         "topic": "要確認",
-        "process": "public_comment",
+        "process": "prepare",
         "action": "PREPARE",
         "summary_3": TEMPLATE_SUMMARY[:],
         "target": ["要確認"],

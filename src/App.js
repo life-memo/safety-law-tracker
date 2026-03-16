@@ -38,67 +38,47 @@ const lawCategories = {
   ]
 };
 
-// 改正プロセス
+// 改正プロセス（4段階）
 const revisionStages = [
-  { 
-    id: "consideration", 
-    name: "検討段階", 
-    icon: FileText, 
+  {
+    id: "watching",
+    name: "動向把握",
+    icon: FileText,
     bgClass: "bg-gray-100",
     textClass: "text-gray-600",
     borderColor: "#6b7280",
-    description: "厚生労働省内や審議会で改正の必要性を検討している段階",
-    detail: "労働政策審議会などで専門家による議論が行われます"
+    description: "審議会・研究会で議論中。気配を察知する段階",
+    action: "情報収集のみ"
   },
-  { 
-    id: "public_comment", 
-    name: "パブリックコメント", 
-    icon: MessageSquare, 
+  {
+    id: "prepare",
+    name: "準備開始",
+    icon: MessageSquare,
     bgClass: "bg-blue-100",
     textClass: "text-blue-600",
     borderColor: "#3b82f6",
-    description: "改正案について広く国民から意見を募集する期間",
-    detail: "e-Govを通じて誰でも意見を提出できます"
+    description: "パブコメ公示。内容ほぼ確定。社内への一報タイミング",
+    action: "影響範囲の確認・上司への報告"
   },
-  { 
-    id: "deliberation", 
-    name: "国会審議中", 
-    icon: FileText, 
+  {
+    id: "implementing",
+    name: "対応準備中",
+    icon: AlertCircle,
     bgClass: "bg-yellow-100",
     textClass: "text-yellow-600",
     borderColor: "#eab308",
-    description: "法案が国会に提出され、審議されている段階",
-    detail: "委員会審議、本会議での採決を経て成立します"
+    description: "公布〜省令・通達整備中。規程改定・研修設計を進める段階",
+    action: "規程改定・研修計画・体制整備"
   },
-  { 
-    id: "promulgated", 
-    name: "公布済み", 
-    icon: CheckCircle, 
+  {
+    id: "enforced",
+    name: "施行済み",
+    icon: CheckCircle,
     bgClass: "bg-green-100",
     textClass: "text-green-600",
     borderColor: "#22c55e",
-    description: "法律が成立し、官報に掲載された段階",
-    detail: "公布日から一定期間後に施行されます"
-  },
-  { 
-    id: "enforcement_scheduled", 
-    name: "施行予定", 
-    icon: Clock, 
-    bgClass: "bg-purple-100",
-    textClass: "text-purple-600",
-    borderColor: "#a855f7",
-    description: "施行日が決まっている段階",
-    detail: "企業は対応準備が必要です"
-  },
-  { 
-    id: "enforced", 
-    name: "施行済み", 
-    icon: CheckCircle, 
-    bgClass: "bg-gray-100",
-    textClass: "text-gray-600",
-    borderColor: "#6b7280",
-    description: "法律が効力を発生している段階",
-    detail: "企業は法令を遵守する義務があります"
+    description: "法的効力あり。遵守・運用フェーズ",
+    action: "定期確認・記録"
   }
 ];
 
@@ -108,7 +88,7 @@ const sampleRevisions = [
     id: 0,
     lawName: "労働安全衛生規則",
     title: "AI・ロボット技術の進展に伴う安全規制の在り方検討",
-    stage: "consideration",
+    stage: "watching",
     description: "労働政策審議会安全衛生分科会で、AI・協働ロボット等の新技術に対応した安全基準の検討を開始",
     officialUrl: "https://www.mhlw.go.jp/stf/shingi/shingi-rousei_126969.html"
   },
@@ -116,7 +96,7 @@ const sampleRevisions = [
     id: 1,
     lawName: "労働安全衛生法及び作業環境測定法",
     title: "労働安全衛生法及び作業環境測定法の一部を改正する法律（令和7年法律第33号）",
-    stage: "promulgated",
+    stage: "implementing",
     publishedDate: "2025-05-14",
     enforcementDate: "2026-04-01",
     description: "個人事業者等に対する安全衛生対策の推進、50人未満事業場でのストレスチェック義務化など",
@@ -141,7 +121,7 @@ const sampleRevisions = [
     id: 3,
     lawName: "特定化学物質障害予防規則等",
     title: "化学物質による労働災害防止のための新たな規制",
-    stage: "enforcement_scheduled",
+    stage: "implementing",
     publishedDate: "2024-02-24",
     enforcementDate: "2026-04-01",
     description: "ラベル表示・SDS交付義務対象物質の追加（約700物質追加、合計約1,600物質）",
@@ -340,7 +320,10 @@ function SafetyLawTracker() {
                         <span className="font-bold text-sm text-gray-800">{stage.name}</span>
                       </div>
                       <p className="text-xs text-gray-600 mb-2">{stage.description}</p>
-                      <p className="text-xs text-gray-500 italic">{stage.detail}</p>
+                      <div className="mt-2 px-2 py-1 bg-gray-50 rounded border border-gray-200">
+                        <p className="text-xs font-medium text-gray-700">対応アクション:</p>
+                        <p className="text-xs text-gray-600">{stage.action}</p>
+                      </div>
                     </div>
                   );
                 })}
@@ -378,6 +361,11 @@ function SafetyLawTracker() {
                         <span className={`px-3 py-1 rounded-full text-xs font-bold ${stageInfo.bgClass} ${stageInfo.textClass}`}>
                           {stageInfo.name}
                         </span>
+                        {stageInfo.action && (
+                          <span className="px-2 py-0.5 rounded text-xs bg-gray-50 text-gray-500 border border-gray-200">
+                            {stageInfo.action}
+                          </span>
+                        )}
                       </div>
                       <h3 className="text-lg font-bold text-gray-800 mb-1">{revision.title}</h3>
                       {showLawName && <p className="text-sm text-gray-600 mb-2">{revision.lawName}</p>}
@@ -400,7 +388,7 @@ function SafetyLawTracker() {
                         )}
                       </div>
 
-                      {revision.stage === "public_comment" && revision.deadlineDate && (
+                      {revision.stage === "prepare" && revision.deadlineDate && (
                         <div className="mt-2 inline-flex items-center gap-2 px-3 py-1 bg-red-50 border border-red-200 rounded-lg">
                           <AlertCircle size={14} className="text-red-500" />
                           <span className="text-sm font-medium text-red-700">
@@ -429,7 +417,7 @@ function SafetyLawTracker() {
 
                   {isExpanded && (
                     <div className="mt-4 pt-4 border-t border-gray-200">
-                      {revision.stage === "public_comment" && revision.ministry && (
+                      {revision.stage === "prepare" && revision.ministry && (
                         <div className="flex items-center gap-2 text-sm mb-4">
                           <FileText size={16} className="text-gray-500" />
                           <span className="font-medium">所管:</span>
@@ -449,7 +437,7 @@ function SafetyLawTracker() {
                         onClick={(e) => e.stopPropagation()}
                       >
                         <FileText size={16} />
-                        {revision.stage === "public_comment" ? "意見募集ページ (e-Gov)" : "e-Gov法令ページ"}
+                        {revision.stage === "prepare" ? "意見募集ページ (e-Gov)" : "e-Gov法令ページ"}
                         <ExternalLink size={14} />
                       </a>
                     </div>
