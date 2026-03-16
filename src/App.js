@@ -424,7 +424,7 @@ function SafetyLawTracker() {
                         onClick={(e) => e.stopPropagation()}
                       >
                         <FileText size={16} />
-                        {revision.stage === "prepare" ? "意見募集ページ (e-Gov)" : "e-Gov法令ページ"}
+                        {revision.source || "公式ページ"}
                         <ExternalLink size={14} />
                       </a>
                     </div>
