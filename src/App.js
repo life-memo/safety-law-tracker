@@ -47,8 +47,7 @@ const revisionStages = [
     bgClass: "bg-gray-100",
     textClass: "text-gray-600",
     borderColor: "#6b7280",
-    description: "審議会・研究会で議論中。気配を察知する段階",
-    action: "情報収集のみ"
+    description: "審議会・研究会で議論中。気配を察知する段階"
   },
   {
     id: "prepare",
@@ -57,8 +56,7 @@ const revisionStages = [
     bgClass: "bg-blue-100",
     textClass: "text-blue-600",
     borderColor: "#3b82f6",
-    description: "パブコメ公示。内容ほぼ確定。社内への一報タイミング",
-    action: "影響範囲の確認・上司への報告"
+    description: "パブコメ公示。内容ほぼ確定。社内への一報タイミング"
   },
   {
     id: "implementing",
@@ -67,8 +65,7 @@ const revisionStages = [
     bgClass: "bg-yellow-100",
     textClass: "text-yellow-600",
     borderColor: "#eab308",
-    description: "公布〜省令・通達整備中。規程改定・研修設計を進める段階",
-    action: "規程改定・研修計画・体制整備"
+    description: "公布〜省令・通達整備中。規程改定・研修設計を進める段階"
   },
   {
     id: "enforced",
@@ -77,8 +74,7 @@ const revisionStages = [
     bgClass: "bg-green-100",
     textClass: "text-green-600",
     borderColor: "#22c55e",
-    description: "法的効力あり。遵守・運用フェーズ",
-    action: "定期確認・記録"
+    description: "法的効力あり。遵守・運用フェーズ"
   }
 ];
 
@@ -319,11 +315,7 @@ function SafetyLawTracker() {
                         <Icon size={16} className={stage.textClass} />
                         <span className="font-bold text-sm text-gray-800">{stage.name}</span>
                       </div>
-                      <p className="text-xs text-gray-600 mb-2">{stage.description}</p>
-                      <div className="mt-2 px-2 py-1 bg-gray-50 rounded border border-gray-200">
-                        <p className="text-xs font-medium text-gray-700">対応アクション:</p>
-                        <p className="text-xs text-gray-600">{stage.action}</p>
-                      </div>
+                      <p className="text-xs text-gray-600">{stage.description}</p>
                     </div>
                   );
                 })}
@@ -361,11 +353,6 @@ function SafetyLawTracker() {
                         <span className={`px-3 py-1 rounded-full text-xs font-bold ${stageInfo.bgClass} ${stageInfo.textClass}`}>
                           {stageInfo.name}
                         </span>
-                        {stageInfo.action && (
-                          <span className="px-2 py-0.5 rounded text-xs bg-gray-50 text-gray-500 border border-gray-200">
-                            {stageInfo.action}
-                          </span>
-                        )}
                       </div>
                       <h3 className="text-lg font-bold text-gray-800 mb-1">{revision.title}</h3>
                       {showLawName && <p className="text-sm text-gray-600 mb-2">{revision.lawName}</p>}
