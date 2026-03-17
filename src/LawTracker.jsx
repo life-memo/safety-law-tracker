@@ -5,6 +5,13 @@ function daysBetween(a, b) {
   return Math.floor(ms / (1000 * 60 * 60 * 24));
 }
 
+const STAGE_LABELS = {
+  watching: "審議・検討中",
+  prepare: "意見公募中",
+  implementing: "公布済",
+  enforced: "施行済",
+};
+
 export default function LawTracker() {
   const [items, setItems] = useState([]);
   const [q, setQ] = useState("");
@@ -92,7 +99,7 @@ export default function LawTracker() {
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
               <strong style={{ fontSize: 16 }}>{it.title}</strong>
               <span style={{ fontSize: 12, padding: "2px 8px", border: "1px solid #ccc", borderRadius: 999 }}>
-                {it.process}
+                {STAGE_LABELS[it.process] || it.process}
               </span>
               <span style={{ fontSize: 12, padding: "2px 8px", border: "1px solid #ccc", borderRadius: 999 }}>
                 {it.action}
