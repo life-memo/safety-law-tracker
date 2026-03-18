@@ -2180,5 +2180,22 @@
     "officialUrl": "https://www.mhlw.go.jp/content/11300000/001670143.pdf",
     "source": "厚労省通知",
     "collectedDate": "2026-03-14"
+  },
+  {
+    "id": 196,
+    "lawName": "労働安全衛生関連法令",
+    "title": "「有害性情報の報告に関する省令」及び「有害性情報の報告に関する運用について」の一部改正（案）に対する意見公募",
+    "stage": "prepare",
+    "description": "問合せ先（所管省庁・部局名等）：厚生労働省医薬局医薬品審査管理課化学物質安全対策室 経済産業省産業保安・安全グループ化学物質管理課化学物質安全室 環境省大臣官房環境保健部化学物質安全課化学物質審査室",
+    "officialUrl": "https://public-comment.e-gov.go.jp/servlet/Public?CLASSNAME=PCMMSTDETAIL&id=595126055&Mode=0",
+    "source": "e-Govパブコメ",
+    "collectedDate": "2026-03-18",
+    "publishedDate": "2026-03-18",
+    "announcementDate": "2026-03-18",
+    "deadlineDate": "2026-04-16",
+    "ministry": "厚生労働省医薬局医薬品審査管理課化学物質安全対策室 経済産業省産業保安・安全グループ化学物質管理課化学物質安全室 環境省大臣官房環境保健部化学物質安全課化学物質審査室",
+    "highlights": [
+      "化学物質対策関連の改正"
+    ]
   }
 ]
