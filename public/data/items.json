@@ -39,5 +39,46 @@
       "締切:2026-03-21"
     ],
     "updated_at": "2026-03-17"
+  },
+  {
+    "id": "e185f915d4e51f9600def07de34ea2df",
+    "title": "労働安全衛生規則の一部を改正する省令案に関する御意見の募集について",
+    "law_family": "労働安全衛生関連法令",
+    "topic": "要確認",
+    "process": "prepare",
+    "action": "PREPARE",
+    "summary_3": [
+      "自動取得された案件です",
+      "詳細は一次ソースを確認してください",
+      "手動でsummary_3を更新してください"
+    ],
+    "target": [
+      "要確認"
+    ],
+    "dates": {},
+    "risk_if_delayed": "要確認",
+    "actions": [
+      {
+        "text": "一次ソースを確認",
+        "owner": "安全"
+      },
+      {
+        "text": "対応要否を判断",
+        "owner": "安全"
+      }
+    ],
+    "sources": [
+      {
+        "label": "egov-pubcom",
+        "url": "https://public-comment.e-gov.go.jp/servlet/Public?CLASSNAME=PCMMSTDETAIL&id=495260016&Mode=0"
+      }
+    ],
+    "tags": [
+      "needs_review",
+      "auto_generated",
+      "公示:2026-04-10",
+      "締切:2026-05-11"
+    ],
+    "updated_at": "2026-04-11"
   }
 ]
