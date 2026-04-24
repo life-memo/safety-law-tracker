@@ -80,5 +80,46 @@
       "締切:2026-05-11"
     ],
     "updated_at": "2026-04-11"
+  },
+  {
+    "id": "90ce55ad258de8fe8a054f561fd9a32b",
+    "title": "労働安全衛生法及び作業環境測定法の一部を改正する法律の一部の施行に伴う関係政令の整備に関する政令案に関する御意見の募集について",
+    "law_family": "労働安全衛生関連法令",
+    "topic": "要確認",
+    "process": "prepare",
+    "action": "PREPARE",
+    "summary_3": [
+      "自動取得された案件です",
+      "詳細は一次ソースを確認してください",
+      "手動でsummary_3を更新してください"
+    ],
+    "target": [
+      "要確認"
+    ],
+    "dates": {},
+    "risk_if_delayed": "要確認",
+    "actions": [
+      {
+        "text": "一次ソースを確認",
+        "owner": "安全"
+      },
+      {
+        "text": "対応要否を判断",
+        "owner": "安全"
+      }
+    ],
+    "sources": [
+      {
+        "label": "egov-pubcom",
+        "url": "https://public-comment.e-gov.go.jp/servlet/Public?CLASSNAME=PCMMSTDETAIL&id=495260028&Mode=0"
+      }
+    ],
+    "tags": [
+      "needs_review",
+      "auto_generated",
+      "公示:2026-04-23",
+      "締切:2026-05-24"
+    ],
+    "updated_at": "2026-04-24"
   }
 ]
