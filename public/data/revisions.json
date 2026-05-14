@@ -2591,5 +2591,41 @@
     "highlights": [
       "化学物質対策関連の改正"
     ]
+  },
+  {
+    "id": 224,
+    "lawName": "労働基準法施行規則",
+    "title": "労働基準法施行規則",
+    "stage": "enforced",
+    "description": "改正法令: 労働者災害補償保険法施行規則等の一部を改正する省令",
+    "officialUrl": "https://elaws.e-gov.go.jp/document?lawid=322M40000100023",
+    "source": "e-Gov法令API v2",
+    "collectedDate": "2026-05-14",
+    "publishedDate": "2026-05-14",
+    "originalPromulgationDate": "1947-08-30",
+    "enforcementDate": "2026-04-01",
+    "lawId": "322M40000100023",
+    "lawNo": "昭和二十二年厚生省令第二十三号",
+    "highlights": [
+      "施行予定日: 2026-04-01"
+    ]
+  },
+  {
+    "id": 225,
+    "lawName": "労働者災害補償保険法施行規則",
+    "title": "労働者災害補償保険法施行規則",
+    "stage": "enforced",
+    "description": "改正法令: 労働者災害補償保険法施行規則等の一部を改正する省令",
+    "officialUrl": "https://elaws.e-gov.go.jp/document?lawid=330M50002000022",
+    "source": "e-Gov法令API v2",
+    "collectedDate": "2026-05-14",
+    "publishedDate": "2026-05-14",
+    "originalPromulgationDate": "1955-09-01",
+    "enforcementDate": "2026-04-01",
+    "lawId": "330M50002000022",
+    "lawNo": "昭和三十年労働省令第二十二号",
+    "highlights": [
+      "施行予定日: 2026-04-01"
+    ]
   }
 ]
