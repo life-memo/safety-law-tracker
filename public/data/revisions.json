@@ -2627,5 +2627,23 @@
     "highlights": [
       "施行予定日: 2026-04-01"
     ]
+  },
+  {
+    "id": 226,
+    "lawName": "雇用保険法施行令",
+    "title": "雇用保険法施行令",
+    "stage": "implementing",
+    "description": "改正法令: 雇用保険法等の一部を改正する法律の施行に伴う関係政令の整備及び経過措置に関する政令",
+    "officialUrl": "https://elaws.e-gov.go.jp/document?lawid=350CO0000000025",
+    "source": "e-Gov法令API v2",
+    "collectedDate": "2026-05-18",
+    "publishedDate": "2026-05-18",
+    "originalPromulgationDate": "1975-03-10",
+    "enforcementDate": "2028-10-01",
+    "lawId": "350CO0000000025",
+    "lawNo": "昭和五十年政令第二十五号",
+    "highlights": [
+      "施行予定日: 2028-10-01"
+    ]
   }
 ]
