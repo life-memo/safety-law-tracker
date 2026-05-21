@@ -2645,5 +2645,23 @@
     "highlights": [
       "施行予定日: 2028-10-01"
     ]
+  },
+  {
+    "id": 227,
+    "lawName": "化学物質の審査及び製造等の規制に関する法律施行令第一条第一項第三十七号の規定に基づき化学物質を定める省令",
+    "title": "化学物質の審査及び製造等の規制に関する法律施行令第一条第一項第三十七号の規定に基づき化学物質を定める省令",
+    "stage": "implementing",
+    "description": "法令更新",
+    "officialUrl": "https://elaws.e-gov.go.jp/document?lawid=508M60001500003",
+    "source": "e-Gov法令API v2",
+    "collectedDate": "2026-05-21",
+    "publishedDate": "2026-05-20",
+    "originalPromulgationDate": "2026-04-17",
+    "enforcementDate": "2026-06-17",
+    "lawId": "508M60001500003",
+    "lawNo": "令和八年厚生労働省・経済産業省・環境省令第三号",
+    "highlights": [
+      "施行予定日: 2026-06-17"
+    ]
   }
 ]
