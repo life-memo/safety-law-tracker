@@ -2681,5 +2681,15 @@
     "highlights": [
       "施行予定日: 2026-07-01"
     ]
+  },
+  {
+    "id": 229,
+    "lawName": "労働安全衛生関連法令",
+    "title": "安全衛生教育指針公示［172KB］",
+    "stage": "enforced",
+    "description": "厚労省通知・通達: 安全衛生教育指針公示［172KB］",
+    "officialUrl": "https://www.mhlw.go.jp/content/11300000/001704144.pdf",
+    "source": "厚労省通知",
+    "collectedDate": "2026-05-25"
   }
 ]
