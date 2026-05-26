@@ -2691,5 +2691,35 @@
     "officialUrl": "https://www.mhlw.go.jp/content/11300000/001704144.pdf",
     "source": "厚労省通知",
     "collectedDate": "2026-05-25"
+  },
+  {
+    "id": 230,
+    "lawName": "労働安全衛生関連法令",
+    "title": "労働安全衛生規則第五百七十七条の二第二項の規定に基づき厚生労働大臣が定める物及び厚生労働大臣が定める濃度の基準の一部を改正する件（案）に関する御意見の募集について",
+    "stage": "prepare",
+    "description": "－5253－1111",
+    "officialUrl": "https://public-comment.e-gov.go.jp/servlet/Public?CLASSNAME=PCMMSTDETAIL&id=495260062&Mode=0",
+    "source": "e-Govパブコメ",
+    "collectedDate": "2026-05-26",
+    "publishedDate": "2026-05-26",
+    "announcementDate": "2026-05-26",
+    "deadlineDate": "2026-06-25",
+    "ministry": "厚生労働省労働基準局安全衛生部化学物質対策課",
+    "highlights": [
+      "労働安全衛生規則の改正"
+    ]
+  },
+  {
+    "id": 231,
+    "lawName": "労働安全衛生関連法令",
+    "title": "労働安全衛生法及び作業環境測定法の一部を改正する法律の一部の施行に伴う関係政令の整理等に関する政令等の施行について（個人事業者等の安全衛生対策の推進に係る規定関係）（令和８年５月26日付け基発0526第１号）［733KB］",
+    "stage": "enforced",
+    "description": "厚労省通知・通達: 労働安全衛生法及び作業環境測定法の一部を改正する法律の一部の施行に伴う関係政令の整理等に関する政令等の施行について（個人事業者等の安全衛生対策の推進に係る規定関係）（令和８年５月26日付け基発0526第１号）［733KB］",
+    "officialUrl": "https://www.mhlw.go.jp/content/11300000/001704274.pdf",
+    "source": "厚労省通知",
+    "collectedDate": "2026-05-26",
+    "highlights": [
+      "労働安全衛生法・作業環境測定法の改正に伴う関係省令の整備"
+    ]
   }
 ]
