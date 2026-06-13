@@ -203,5 +203,46 @@
       "締切:2026-07-04"
     ],
     "updated_at": "2026-06-06"
+  },
+  {
+    "id": "817be48b22bcd68e6bc659b943942745",
+    "title": "作業環境測定法施行規則第３条の３第１項第２号の規定に基づき厚生労働大臣が定める要件（案）及び作業環境測定法施行規則第５条の２の２の規定に基づき厚生労働大臣が定める者（案）に関する御意見の募集について",
+    "law_family": "労働安全衛生関連法令",
+    "topic": "要確認",
+    "process": "prepare",
+    "action": "PREPARE",
+    "summary_3": [
+      "自動取得された案件です",
+      "詳細は一次ソースを確認してください",
+      "手動でsummary_3を更新してください"
+    ],
+    "target": [
+      "要確認"
+    ],
+    "dates": {},
+    "risk_if_delayed": "要確認",
+    "actions": [
+      {
+        "text": "一次ソースを確認",
+        "owner": "安全"
+      },
+      {
+        "text": "対応要否を判断",
+        "owner": "安全"
+      }
+    ],
+    "sources": [
+      {
+        "label": "egov-pubcom",
+        "url": "https://public-comment.e-gov.go.jp/servlet/Public?CLASSNAME=PCMMSTDETAIL&id=495260085&Mode=0"
+      }
+    ],
+    "tags": [
+      "needs_review",
+      "auto_generated",
+      "公示:2026-06-12",
+      "締切:2026-07-11"
+    ],
+    "updated_at": "2026-06-13"
   }
 ]
