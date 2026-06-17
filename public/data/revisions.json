@@ -2824,5 +2824,65 @@
     "highlights": [
       "労働安全衛生規則の改正"
     ]
+  },
+  {
+    "id": 238,
+    "lawName": "労働安全衛生関連法令",
+    "title": "令和７年度化学物質管理に係る専門家検討会 報告書（令和８年３月27日公表）［739KB］",
+    "stage": "enforced",
+    "description": "厚労省通知・通達: 令和７年度化学物質管理に係る専門家検討会 報告書（令和８年３月27日公表）［739KB］",
+    "officialUrl": "https://www.mhlw.go.jp/content/11300000/001712034.pdf",
+    "source": "厚労省通知",
+    "collectedDate": "2026-06-17"
+  },
+  {
+    "id": 239,
+    "lawName": "労働安全衛生関連法令",
+    "title": "令和７年度化学物質管理に係る専門家検討会 報告書別紙（その１）（令和８年３月27日公表）［31.5MB］",
+    "stage": "enforced",
+    "description": "厚労省通知・通達: 令和７年度化学物質管理に係る専門家検討会 報告書別紙（その１）（令和８年３月27日公表）［31.5MB］",
+    "officialUrl": "https://www.mhlw.go.jp/content/11300000/001712036.pdf",
+    "source": "厚労省通知",
+    "collectedDate": "2026-06-17"
+  },
+  {
+    "id": 240,
+    "lawName": "労働安全衛生関連法令",
+    "title": "令和７年度化学物質管理に係る専門家検討会 報告書別紙（その２の１）（令和８年３月27日公表）［27.9MB］",
+    "stage": "enforced",
+    "description": "厚労省通知・通達: 令和７年度化学物質管理に係る専門家検討会 報告書別紙（その２の１）（令和８年３月27日公表）［27.9MB］",
+    "officialUrl": "https://www.mhlw.go.jp/content/11300000/001712037.pdf",
+    "source": "厚労省通知",
+    "collectedDate": "2026-06-17"
+  },
+  {
+    "id": 241,
+    "lawName": "労働安全衛生関連法令",
+    "title": "令和７年度化学物質管理に係る専門家検討会 報告書別紙（その２の２）（令和８年３月27日公表）［29.1MB］",
+    "stage": "enforced",
+    "description": "厚労省通知・通達: 令和７年度化学物質管理に係る専門家検討会 報告書別紙（その２の２）（令和８年３月27日公表）［29.1MB］",
+    "officialUrl": "https://www.mhlw.go.jp/content/11300000/001712039.pdf",
+    "source": "厚労省通知",
+    "collectedDate": "2026-06-17"
+  },
+  {
+    "id": 242,
+    "lawName": "労働安全衛生関連法令",
+    "title": "令和７年度化学物質管理に係る専門家検討会 報告書別紙（その３）（令和８年３月27日公表）［29.1MB］",
+    "stage": "enforced",
+    "description": "厚労省通知・通達: 令和７年度化学物質管理に係る専門家検討会 報告書別紙（その３）（令和８年３月27日公表）［29.1MB］",
+    "officialUrl": "https://www.mhlw.go.jp/content/11300000/001712040.pdf",
+    "source": "厚労省通知",
+    "collectedDate": "2026-06-17"
+  },
+  {
+    "id": 243,
+    "lawName": "労働安全衛生関連法令",
+    "title": "令和８年度化学物質管理に係る専門家検討会 中間取りまとめ報告書（令和８年６月５日公表）［501KB］",
+    "stage": "enforced",
+    "description": "厚労省通知・通達: 令和８年度化学物質管理に係る専門家検討会 中間取りまとめ報告書（令和８年６月５日公表）［501KB］",
+    "officialUrl": "https://www.mhlw.go.jp/content/11300000/001712041.pdf",
+    "source": "厚労省通知",
+    "collectedDate": "2026-06-17"
   }
 ]
