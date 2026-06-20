@@ -2884,5 +2884,43 @@
     "officialUrl": "https://www.mhlw.go.jp/content/11300000/001712041.pdf",
     "source": "厚労省通知",
     "collectedDate": "2026-06-17"
+  },
+  {
+    "id": 244,
+    "lawName": "平成二十三年三月十一日に発生した東北地方太平洋沖地震に伴う原子力発電所の事故により放出された放射性物質による環境の汚染への対処に関する特別措置法",
+    "title": "平成二十三年三月十一日に発生した東北地方太平洋沖地震に伴う原子力発電所の事故により放出された放射性物質による環境の汚染への対処に関する特別措置法",
+    "stage": "implementing",
+    "description": "改正法令: 廃棄物の処理及び清掃に関する法律等の一部を改正する法律",
+    "officialUrl": "https://elaws.e-gov.go.jp/document?lawid=423AC1000000110",
+    "source": "e-Gov法令API v2",
+    "collectedDate": "2026-06-20",
+    "publishedDate": "2026-06-19",
+    "originalPromulgationDate": "2011-08-30",
+    "lawId": "423AC1000000110",
+    "lawNo": "平成二十三年法律第百十号"
+  },
+  {
+    "id": 245,
+    "lawName": "労働安全衛生関連法令",
+    "title": "労働安全衛生法及び作業環境測定法の一部を改正する法律の一部の施行に伴う厚生労働省関係告示の整備等に関する告示案及びサンプリング補助者講習規程（案）に関する御意見の募集について",
+    "stage": "prepare",
+    "description": "",
+    "officialUrl": "https://public-comment.e-gov.go.jp/servlet/Public?CLASSNAME=PCMMSTDETAIL&id=495260092&Mode=0",
+    "source": "e-Govパブコメ",
+    "collectedDate": "2026-06-20",
+    "publishedDate": "2026-06-19",
+    "announcementDate": "2026-06-19",
+    "deadlineDate": "2026-07-18",
+    "ministry": "厚生労働省労働基準局安全衛生部化学物質対策課"
+  },
+  {
+    "id": 246,
+    "lawName": "労働安全衛生関連法令",
+    "title": "労働安全衛生規則及び労働者派遣事業の適正な運営の確保及び派遣労働者の保護等に関する法律施行規則の一部を改正する省令の施行について（個人事業者等の業務上災害の報告に係る規定関係）（令和８年６月18日付け基発0618第２号）［285KB］",
+    "stage": "enforced",
+    "description": "厚労省通知・通達: 労働安全衛生規則及び労働者派遣事業の適正な運営の確保及び派遣労働者の保護等に関する法律施行規則の一部を改正する省令の施行について（個人事業者等の業務上災害の報告に係る規定関係）（令和８年６月18日付け基発0618第２号）［285KB］",
+    "officialUrl": "https://www.mhlw.go.jp/content/11300000/001713372.pdf",
+    "source": "厚労省通知",
+    "collectedDate": "2026-06-20"
   }
 ]
