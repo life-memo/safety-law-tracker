@@ -2922,5 +2922,42 @@
     "officialUrl": "https://www.mhlw.go.jp/content/11300000/001713372.pdf",
     "source": "厚労省通知",
     "collectedDate": "2026-06-20"
+  },
+  {
+    "id": 247,
+    "lawName": "労働基準法",
+    "title": "労働基準法",
+    "stage": "enforced",
+    "description": "改正法令: 民法等の一部を改正する法律の施行に伴う関係法律の整備等に関する法律",
+    "officialUrl": "https://elaws.e-gov.go.jp/document?lawid=322AC0000000049",
+    "source": "e-Gov法令API v2",
+    "collectedDate": "2026-06-25",
+    "publishedDate": "2026-06-24",
+    "originalPromulgationDate": "1947-04-07",
+    "enforcementDate": "2026-06-24",
+    "lawId": "322AC0000000049",
+    "lawNo": "昭和二十二年法律第四十九号",
+    "highlights": [
+      "施行予定日: 2026-06-24"
+    ]
+  },
+  {
+    "id": 248,
+    "lawName": "作業環境測定法施行令",
+    "title": "作業環境測定法施行令",
+    "stage": "implementing",
+    "description": "改正法令: 労働安全衛生法及び作業環境測定法の一部を改正する法律の一部の施行に伴う関係政令の整備に関する政令",
+    "officialUrl": "https://elaws.e-gov.go.jp/document?lawid=350CO0000000244",
+    "source": "e-Gov法令API v2",
+    "collectedDate": "2026-06-25",
+    "publishedDate": "2026-06-24",
+    "originalPromulgationDate": "1975-08-01",
+    "enforcementDate": "2026-10-01",
+    "lawId": "350CO0000000244",
+    "lawNo": "昭和五十年政令第二百四十四号",
+    "highlights": [
+      "労働安全衛生法・作業環境測定法の改正に伴う関係省令の整備",
+      "施行予定日: 2026-10-01"
+    ]
   }
 ]
