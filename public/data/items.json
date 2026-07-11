@@ -285,5 +285,46 @@
       "締切:2026-07-18"
     ],
     "updated_at": "2026-06-20"
+  },
+  {
+    "id": "69c6e02c78b690ac1972e8f3a1bcbba4",
+    "title": "化学物質による健康障害防止のための濃度の基準の適用等に関する技術上の指針の一部を改正する件（案）に関する御意見の募集について",
+    "law_family": "労働安全衛生関連法令",
+    "topic": "要確認",
+    "process": "prepare",
+    "action": "PREPARE",
+    "summary_3": [
+      "自動取得された案件です",
+      "詳細は一次ソースを確認してください",
+      "手動でsummary_3を更新してください"
+    ],
+    "target": [
+      "要確認"
+    ],
+    "dates": {},
+    "risk_if_delayed": "要確認",
+    "actions": [
+      {
+        "text": "一次ソースを確認",
+        "owner": "安全"
+      },
+      {
+        "text": "対応要否を判断",
+        "owner": "安全"
+      }
+    ],
+    "sources": [
+      {
+        "label": "egov-pubcom",
+        "url": "https://public-comment.e-gov.go.jp/servlet/Public?CLASSNAME=PCMMSTDETAIL&id=495260106&Mode=0"
+      }
+    ],
+    "tags": [
+      "needs_review",
+      "auto_generated",
+      "公示:2026-07-10",
+      "締切:2026-08-10"
+    ],
+    "updated_at": "2026-07-11"
   }
 ]
