@@ -3048,5 +3048,41 @@
     "highlights": [
       "化学物質対策関連の改正"
     ]
+  },
+  {
+    "id": 254,
+    "lawName": "化学物質の審査及び製造等の規制に関する法律第五十四条の規定により地方環境局長に委任する権限を定める省令",
+    "title": "化学物質の審査及び製造等の規制に関する法律第五十四条の規定により地方環境局長に委任する権限を定める省令",
+    "stage": "enforced",
+    "description": "改正法令: 環境省設置法の一部を改正する法律の施行に伴う環境省関係省令の整備に関する省令",
+    "officialUrl": "https://elaws.e-gov.go.jp/document?lawid=417M60001000024",
+    "source": "e-Gov法令API v2",
+    "collectedDate": "2026-07-14",
+    "publishedDate": "2026-07-14",
+    "originalPromulgationDate": "2005-09-20",
+    "enforcementDate": "2026-07-01",
+    "lawId": "417M60001000024",
+    "lawNo": "平成十七年環境省令第二十四号",
+    "highlights": [
+      "施行予定日: 2026-07-01"
+    ]
+  },
+  {
+    "id": 255,
+    "lawName": "厚生労働省関係化学物質の審査及び製造等の規制に関する法律施行規則",
+    "title": "厚生労働省関係化学物質の審査及び製造等の規制に関する法律施行規則",
+    "stage": "implementing",
+    "description": "改正法令: 医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律等の一部を改正する法律の一部の施行に伴う厚生労働省関係省令の整備等に関する省令",
+    "officialUrl": "https://elaws.e-gov.go.jp/document?lawid=361M50000100054",
+    "source": "e-Gov法令API v2",
+    "collectedDate": "2026-07-14",
+    "publishedDate": "2026-07-14",
+    "originalPromulgationDate": "1986-11-28",
+    "enforcementDate": "2027-05-20",
+    "lawId": "361M50000100054",
+    "lawNo": "昭和六十一年厚生省令第五十四号",
+    "highlights": [
+      "施行予定日: 2027-05-20"
+    ]
   }
 ]
