@@ -3206,5 +3206,23 @@
     "officialUrl": "https://www.mhlw.go.jp/content/11300000/001679776.pdf",
     "source": "厚労省通知",
     "collectedDate": "2026-08-05"
+  },
+  {
+    "id": 266,
+    "lawName": "雇用保険法等の一部を改正する法律の一部の施行に伴う関係政令の整備等及び経過措置に関する政令",
+    "title": "雇用保険法等の一部を改正する法律の一部の施行に伴う関係政令の整備等及び経過措置に関する政令",
+    "stage": "enforced",
+    "description": "改正法令: 雇用保険法等の一部を改正する法律の一部の施行に伴う関係政令の整備等及び経過措置に関する政令の一部を改正する政令",
+    "officialUrl": "https://elaws.e-gov.go.jp/document?lawid=421CO0000000296",
+    "source": "e-Gov法令API v2",
+    "collectedDate": "2026-08-10",
+    "publishedDate": "2026-08-10",
+    "originalPromulgationDate": "2009-12-24",
+    "enforcementDate": "2026-08-01",
+    "lawId": "421CO0000000296",
+    "lawNo": "平成二十一年政令第二百九十六号",
+    "highlights": [
+      "施行予定日: 2026-08-01"
+    ]
   }
 ]
