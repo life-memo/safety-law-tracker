@@ -3224,5 +3224,23 @@
     "highlights": [
       "施行予定日: 2026-08-01"
     ]
+  },
+  {
+    "id": 267,
+    "lawName": "労働者派遣事業の適正な運営の確保及び派遣労働者の保護等に関する法律施行令第二条第二項の市町村を定める省令",
+    "title": "労働者派遣事業の適正な運営の確保及び派遣労働者の保護等に関する法律施行令第二条第二項の市町村を定める省令",
+    "stage": "implementing",
+    "description": "改正法令: 労働者派遣事業の適正な運営の確保及び派遣労働者の保護等に関する法律施行令第二条第二項の市町村を定める省令の一部を改正する省令",
+    "officialUrl": "https://elaws.e-gov.go.jp/document?lawid=418M60000100070",
+    "source": "e-Gov法令API v2",
+    "collectedDate": "2026-08-18",
+    "publishedDate": "2026-08-18",
+    "originalPromulgationDate": "2006-03-31",
+    "enforcementDate": "2026-09-01",
+    "lawId": "418M60000100070",
+    "lawNo": "平成十八年厚生労働省令第七十号",
+    "highlights": [
+      "施行予定日: 2026-09-01"
+    ]
   }
 ]
