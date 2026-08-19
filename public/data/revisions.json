@@ -3242,5 +3242,15 @@
     "highlights": [
       "施行予定日: 2026-09-01"
     ]
+  },
+  {
+    "id": 268,
+    "lawName": "労働安全衛生関連法令",
+    "title": "リスクアセスメント告示［48KB］",
+    "stage": "enforced",
+    "description": "厚労省通知・通達: リスクアセスメント告示［48KB］",
+    "officialUrl": "https://www.mhlw.go.jp/content/11300000/001736047.pdf",
+    "source": "厚労省通知",
+    "collectedDate": "2026-08-19"
   }
 ]
