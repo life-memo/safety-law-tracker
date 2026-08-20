@@ -3252,5 +3252,23 @@
     "officialUrl": "https://www.mhlw.go.jp/content/11300000/001736047.pdf",
     "source": "厚労省通知",
     "collectedDate": "2026-08-19"
+  },
+  {
+    "id": 269,
+    "lawName": "溶融亜鉛めっき鋼帯及び鋼板に対して課する暫定的な不当廉売関税に関する政令",
+    "title": "溶融亜鉛めっき鋼帯及び鋼板に対して課する暫定的な不当廉売関税に関する政令",
+    "stage": "enforced",
+    "description": "法令更新",
+    "officialUrl": "https://elaws.e-gov.go.jp/document?lawid=508CO0000000254",
+    "source": "e-Gov法令API v2",
+    "collectedDate": "2026-08-20",
+    "publishedDate": "2026-08-20",
+    "originalPromulgationDate": "2026-08-07",
+    "enforcementDate": "2026-08-08",
+    "lawId": "508CO0000000254",
+    "lawNo": "令和八年政令第二百五十四号",
+    "highlights": [
+      "施行予定日: 2026-08-08"
+    ]
   }
 ]
