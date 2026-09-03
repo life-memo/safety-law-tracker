@@ -3393,5 +3393,35 @@
     "officialUrl": "https://www.mhlw.go.jp/content/11300000/001744180.pdf",
     "source": "厚労省通知",
     "collectedDate": "2026-09-01"
+  },
+  {
+    "id": 279,
+    "lawName": "労働安全衛生関連法令",
+    "title": "「作業環境測定士講習について」の一部改正について（令和８年９月１日付け基発0901第13号）［679KB］",
+    "stage": "enforced",
+    "description": "厚労省通知・通達: 「作業環境測定士講習について」の一部改正について（令和８年９月１日付け基発0901第13号）［679KB］",
+    "officialUrl": "https://www.mhlw.go.jp/content/11300000/001744886.pdf",
+    "source": "厚労省通知",
+    "collectedDate": "2026-09-03"
+  },
+  {
+    "id": 280,
+    "lawName": "労働安全衛生関連法令",
+    "title": "個人ばく露測定を実施するための作業環境測定士登録証の書き換えが始まりました！［403KB］",
+    "stage": "enforced",
+    "description": "厚労省通知・通達: 個人ばく露測定を実施するための作業環境測定士登録証の書き換えが始まりました！［403KB］",
+    "officialUrl": "https://www.mhlw.go.jp/content/11300000/001744887.pdf",
+    "source": "厚労省通知",
+    "collectedDate": "2026-09-03"
+  },
+  {
+    "id": 281,
+    "lawName": "労働安全衛生関連法令",
+    "title": "作業環境測定機関登録証の書き換えはお済みですか？［399KB］",
+    "stage": "enforced",
+    "description": "厚労省通知・通達: 作業環境測定機関登録証の書き換えはお済みですか？［399KB］",
+    "officialUrl": "https://www.mhlw.go.jp/content/11300000/001744888.pdf",
+    "source": "厚労省通知",
+    "collectedDate": "2026-09-03"
   }
 ]
